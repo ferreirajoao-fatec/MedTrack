@@ -2,223 +2,372 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer">
-    <link rel="stylesheet" href="../css/sobre.css">
-    <link rel="shortcut icon" href="../imagens/logo.svg" type="image/x-icon">
-    <title>Sobre Medtrack</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Font Awesome para ícones -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+crossorigin="anonymous" referrerpolicy="no-referrer">
+<!-- CSS da página Sobre -->
+<link rel="stylesheet" href="../css/sobre.css">
+<!-- Favicon -->
+<link rel="shortcut icon" href="../imagens/logo-escuro.svg" type="image/x-icon">
+<title>Sobre Medtrack</title>
 </head>
-
 <body>
-    <main>
-        <nav class="navbar">
-            <div class="logotipo">
-                <img class="navbar-logo" src="../imagens/logo.svg" alt="LogoTipo da MedTrack">
-                <p>MedTrack</p>
-            </div>
-            <ul class="navbar-list">
-                <li><a class="navbar-item" href="../pages/home.html">Home</a></li>
-                <li><a class="navbar-item" href="../pages/sobre.html">Sobre</a></li>
-            </ul>
+<main>
 
-            <div class="navbar-btn">
-                <a class="navbar-btn-item" href="../pages/login.html">Login</a>
-                <a class="navbar-btn-item" href="../pages/cadastro.html">Cadastro</a>
-                <a class="navbar-btn-item" href="../pages/formulario.html">Formulário</a>
-                <a class="navbar-btn-profile" href="../pages/perfil.html"><i class="fa-solid fa-user"></i></a>
-                <a class="nav-btn-items" href="#" id="nav-btn-toggle"><i class="fa-solid fa-bars"></i></a>
-            </div>
-        </nav>
+<nav class="navbar">
+<!-- Logo e nome do site -->
+<div class="logotipo">
+    <img class="navbar-logo" src="../imagens/logo-claro.svg" alt="LogoTipo da MedTrack">
+    <p>MedTrack</p>
+</div>
 
-        <!-- Barra de Navegação Mobile -->
+<!-- Links principais de navegação -->
+<ul class="navbar-list">
+    <li><a class="navbar-item" href="../pages/home.html">Home</a></li>
+    <li><a class="navbar-item" href="../pages/sobre.html">Sobre</a></li>
+</ul>
 
-        <div class="navbar-mobile" id="nav-mobile">
-            <ul class="nav-list-mobile">
-                <li><a class="nav-items" href="../pages/home.html">Home</a></li>
-                <li><a class="nav-items" href="../pages/sobre.html">Sobre</a></li>
-                <li><a class="nav-items" href="../pages/login.html">Login</a></li>
-                <li><a class="nav-items" href="../pages/cadastro.html">Cadastro</a></li>
-                <li><a class="nav-items" href="../pages/formulario.html">Formulário</a></li>
-            </ul>
-        </div>
+    <!-- Botões de ação (Login, Cadastro, Formulário e Perfil) -->
+<div class="navbar-btn">
+    <a class="navbar-btn-item" href="../pages/login.html">Login</a>
+    <a class="navbar-btn-item" href="../pages/cadastro.html">Cadastro</a>
+    <a class="navbar-btn-item" href="../pages/formulario.html">Formulário</a>
 
-        <div class="div-header">
-            <section class="section-header">
-                <h1 class="title-header">Sobre a empresa <span>Med Track</span></h1>
-                <p class="text-header">
-                    Somos uma empresa comprometida com a inovação na área da saúde
-                    digital. Acreditamos que a tecnologia pode salvar vidas quando usada
-                    com propósito e responsabilidade. Nossa missão é desenvolver
-                    soluções acessíveis, seguras e eficientes que conectem pessoas e
-                    profissionais da saúde, promovendo bem-estar e agilidade no cuidado.
-                    Com uma equipe multidisciplinar formada por desenvolvedores,
-                    designers e especialistas em saúde, trabalhamos para transformar
-                    boas ideias em ferramentas que realmente fazem a diferença no dia a
-                    dia das pessoas.
-                </p>
-            </section>
-            <img class="image-header" src="../imagens/imagem-header2.svg" alt="Imagem de um médico em telechamada">
-        </div>
+    <!-- Ícone do modo claro/escuro -->
+    <a href="#" id="dark-mode-toggle" class="navbar-btn-item">
+    <i class="fa-solid fa-moon"></i></a>
 
-        <h2 class="title">Diretrizes da nossa atuação</h2>
+    <!-- Ícone de perfil do usuário -->
+    <a class="navbar-btn-profile" href="../pages/perfil.html">
+    <i class="fa-solid fa-user"></i>
+    </a>
 
-        <div class="content-info">
-            <section class="card-info">
-                <span class="icon-wrapper">
-                    <i class="fa-solid fa-chart-simple"></i></span>
-                <p class="title-info">Visão</p>
-                <p class="text-info">
-                    Ser referência em tecnologia para a saúde digital, contribuindo para
-                    um futuro onde a informação salva vidas e o cuidado ultrapassa
-                    barreiras físicas.
-                </p>
-            </section>
+    <!-- Botão de menu hambúrguer para dispositivos móveis -->
+    <a class="nav-btn-items" href="#" id="nav-btn-toggle">
+    <i class="fa-solid fa-bars"></i>
+    </a>
+</div>
+</nav>
 
-            <section class="card-info">
-                <span class="icon-wrapper"> <i class="fa-solid fa-check"></i></span>
-                <p class="title-info">Missão</p>
-                <p class="text-info">
-                    Desenvolver ferramentas inovadoras que conectem pessoas e
-                    profissionais da saúde, promovendo um atendimento mais ágil,
-                    humanizado e baseado em informações confiáveis.
-                </p>
-            </section>
+<!-- Barra de Navegação Mobile -->
+<div class="navbar-mobile" id="nav-mobile">
+<!-- Lista de links Mobile-->
+<ul class="nav-list-mobile">
+    <li><a class="nav-items" href="../pages/home.html">Home</a></li>
+    <li><a class="nav-items" href="../pages/sobre.html">Sobre</a></li>
+    <li><a class="nav-items" href="../pages/login.html">Login</a></li>
+    <li><a class="nav-items" href="../pages/cadastro.html">Cadastro</a></li>
+    <li><a class="nav-items" href="../pages/formulario.html">Formulário</a></li>
+</ul>
+</div>
 
-            <section class="card-info">
-                <span class="icon-wrapper"> <i class="fa-solid fa-bars"></i></span>
-                <p class="title-info">Valores</p>
-                <p class="text-info">
-                    Nossos valores são baseados no cuidado com a vida, na inovação com
-                    propósito, na proteção dos dados, na acessibilidade para todos e na
-                    colaboração entre pessoas e equipes.
-                </p>
-            </section>
-        </div>
+<!-- Indicadores de Impacto e História da Empresa -->
+<div class="div-header">
+<section class="section-header">
+    <!-- Título da página -->
+    <h1 class="title-header">Sobre a empresa <span>Med Track</span></h1>
+    <!-- Texto descritivo sobre a empresa -->
+    <p class="text-header">
+       Somos uma empresa comprometida com a inovação na área da saúde digital. 
+       Acreditamos que a tecnologia pode salvar vidas quando usada com propósito e 
+       responsabilidade. Nossa missão é desenvolver soluções acessíveis, seguras e 
+       eficientes que conectem pessoas e profissionais da saúde, promovendo bem-estar e 
+       agilidade no cuidado. Com uma equipe multidisciplinar formada por desenvolvedores, 
+       designers e especialistas em saúde, trabalhamos para transformar boas ideias em 
+       ferramentas que realmente fazem a diferença no dia a dia das pessoas.
 
-        <h2 class="title">Sobre os Desenvolvedores</h2>
+    </p>
 
-        <div class="content-team">
-            <section class="card-team">
-                <img class="card-team-image" src="../imagens/dev-nicolas.png" alt="Imagem de Nicolas Alves">
-                <hr class="team-divider">
-                <p class="card-team-name">Nicolas Alves</p>
-                <p class="card-team-text">Programador Web</p>
-                <div class="team-social-media">
-                    <a class="team-social-link" href="#"><i class="fa-brands fa-instagram"></i></a>
-                    <a class="team-social-link" href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                    <a class="team-social-link" href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                </div>
-            </section>
+        <!-- Indicadores de Impacto -->
+    <div class="header-info">
+        <section class="header-section-info">
+        <p class="header-number">2020</p>
+        <p class="header-info-text">Ano de fundação</p>
+        </section>
 
-            <section class="card-team">
-                <img class="card-team-image" src="../imagens/dev-joao.png" alt="Imagem de João Gabriel Ferreira">
-                <hr class="team-divider">
-                <p class="card-team-name">João Gabriel Ferreira</p>
-                <p class="card-team-text">Modelador de Dados</p>
-                <div class="team-social-media">
-                    <a class="team-social-link" href="#"><i class="fa-brands fa-instagram"></i></a>
-                    <a class="team-social-link" href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                    <a class="team-social-link" href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                </div>
-            </section>
+        <section class="header-section-info">
+        <p class="header-number">30k+</p>
+        <p class="header-info-text">Pacientes e profissionais unidos</p>
+        </section>
 
-            <section class="card-team">
-                <img class="card-team-image" src="../imagens/dev-jose.png" alt="Imagem de José Henrique Bessa">
-                <hr class="team-divider">
-                <p class="card-team-name">José Henrique Bessa</p>
-                <p class="card-team-text">Designer de Interfaces</p>
-                <div class="team-social-media">
-                    <a class="team-social-link" href="#"><i class="fa-brands fa-instagram"></i></a>
-                    <a class="team-social-link" href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                    <a class="team-social-link" href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                </div>
-            </section>
-        </div>
-
-        <div class="content-team">
-            <section class="card-team">
-                <img class="card-team-image" src="../imagens/dev-sophia.png" alt="Imagem de Sophia Cavallaro">
-                <hr class="team-divider">
-                <p class="card-team-name">Sophia Cavallaro</p>
-                <p class="card-team-text">Programador Web</p>
-                <div class="team-social-media">
-                    <a class="team-social-link" href="#"><i class="fa-brands fa-instagram"></i></a>
-                    <a class="team-social-link" href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                    <a class="team-social-link" href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                </div>
-            </section>
-
-            <section class="card-team">
-                <img class="card-team-image" src="../imagens/dev-mariana.png" alt="Imagem de Mariana Lourenço">
-                <hr class="team-divider">
-                <p class="card-team-name">Mariana Lourenço</p>
-                <p class="card-team-text">Programador Web</p>
-                <div class="team-social-media">
-                    <a class="team-social-link" href="#"><i class="fa-brands fa-instagram"></i></a>
-                    <a class="team-social-link" href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                    <a class="team-social-link" href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                </div>
-            </section>
-
-            <section class="card-team">
-                <img class="card-team-image" src="../imagens/dev-gustavo.png" alt="Imagem de Gustavo Baruc">
-                <hr class="team-divider">
-                <p class="card-team-name">Gustavo Baruc</p>
-                <p class="card-team-text">Modelador de Dados</p>
-                <div class="team-social-media">
-                    <a class="team-social-link" href="#"><i class="fa-brands fa-instagram"></i></a>
-                    <a class="team-social-link" href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                    <a class="team-social-link" href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                </div>
-            </section>
-        </div>
-    </main>
-
-    <footer class="footer">
-        <div class="footer-social">
-            <a class="footer-social-link" href="#">
-                <i class="fa-brands fa-facebook-f"></i></a>
-            <a class="footer-social-link" href="#">
-                <i class="fa-brands fa-instagram"></i></a>
-            <a class="footer-social-link" href="#">
-                <i class="fa-brands fa-youtube"></i></a>
-            <a class="footer-social-link" href="#">
-                <i class="fa-brands fa-x-twitter"></i></a>
-        </div>
-
-        <ul class="footer-menu">
-            <li class="footer-item">
-                <a class="footer-link" href="../pages/home.html">Home</a>
-            </li>
-            <li class="footer-item">
-                <a class="footer-link" href="../pages/sobre.html">Sobre</a>
-            </li>
-            <li class="footer-item">
-                <a class="footer-link" href="/pages/perfil.html">Perfil</a>
-            </li>
-            <li class="footer-item">
-                <a class="footer-link" href="../pages/login.html">Login</a>
-            </li>
-            <li class="footer-item">
-                <a class="footer-link" href="../pages/cadastro.html">Cadastro</a>
-            </li>
-            <li class="footer-item">
-                <a class="footer-link" href="../pages/formulario.html">Formulário</a>
-            </li>
-        </ul>
-    </footer>
-
-    <div class="copyright">
-        <p class="text-copyright">
-            © 2025 MedTrack — Saúde digital com inteligência. Todos os direitos
-            reservados.
-        </p>
+        <section class="header-section-info">
+        <p class="header-number">10k+</p>
+        <p class="header-info-text">Pacientes conectados ao cuidado</p>
+        </section>
     </div>
+    </section>
 
-    <script src="../js/navbar.js"></script>
+    <!-- Imagem ilustrativa do cabeçalho -->
+    <img class="image-header" src="../imagens/imagem-header-sobre.svg" alt="Imagem de um médico em telechamada">
+</div>
+
+<!-- Subtítulo da seção de diretrizes -->
+    <h2 class="title-card-info">Diretrizes da nossa atuação</h2>
+
+<!-- Container de cards com visão, missão e valores -->
+<div class="content-info-destaque">
+    <!-- Card Visão -->
+<section class="card-info-destaque">
+    <!-- Ícone representativo -->
+    <span class="icon-info-destaque">
+    <i class="fa-solid fa-chart-simple"></i>
+    </span>
+        <p class="title-info-destaque">Visão</p>
+        <p class="text-info-destaque">
+        Ser referência em tecnologia para a saúde digital, 
+        contribuindo para um futuro onde a informação salva vidas e 
+        o cuidado ultrapassa barreiras físicas.
+        </p>
+    </section>
+
+    <!-- Card Missão -->
+    <section class="card-info-destaque">
+    <span class="icon-info-destaque">
+    <i class="fa-solid fa-check"></i>
+    </span>
+        <p class="title-info-destaque">Missão</p>
+        <p class="text-info-destaque">
+        Desenvolver ferramentas inovadoras que conectem pessoas e 
+        profissionais da saúde, 
+        promovendo um atendimento mais ágil, humanizado e baseado 
+        em informações confiáveis.
+        </p>
+    </section>
+
+    <!-- Card Valores -->
+    <section class="card-info-destaque">
+    <span class="icon-info-destaque">
+    <i class="fa-solid fa-bars"></i>
+    </span>
+        <p class="title-info-destaque">Valores</p>
+        <p class="text-info-destaque">
+        Nossos valores são baseados no cuidado com a vida, na inovação com propósito, 
+        na proteção dos dados, 
+        na acessibilidade para todos e na colaboração entre pessoas e equipes.
+        </p>
+    </section>
+
+    <!-- Card Valores -->
+    <section class="card-info-destaque">
+    <span class="icon-info-destaque">
+    <i class="fa-solid fa-bars"></i>
+    </span>
+        <p class="title-info-destaque">Privacidade</p>
+        <p class="text-info-destaque">
+        Nossa prioridade é a privacidade. Mantemos os dados protegidos, 
+        garantindo transparência e confiança.           
+    </p>
+    </section>
+</div>
+
+<!-- Título da seção sobre a equipe -->
+<h2 class="title-card-team">Sobre os Desenvolvedores</h2>
+
+<!-- Container de cards dos desenvolvedores (primeira linha) -->
+<div class="content-team">
+
+    <!-- Cards dos desenvolvedores -->
+    <section class="card-team">
+
+            <!-- Capa colorida -->
+        <div class="card-team-cover"></div>
+        <!-- Foto do desenvolvedor -->
+        <img class="card-team-image" src="../imagens/dev-nicolas.png" alt="Imagem de Nicolas Alves">
+        <!-- Linha divisória -->
+        <hr class="team-divider">
+        <!-- Nome do desenvolvedor -->
+        <p class="card-team-name">Nicolas Alves</p>
+        <!-- Cargo ou função -->
+        <p class="card-team-text">Programador Web</p>
+        <!-- Links para redes sociais -->
+        <div class="team-social-media">
+        <a class="team-social-link" href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a class="team-social-link" href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a class="team-social-link" href="#"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+    </section>
+
+    <!-- Cards dos desenvolvedores -->
+    <section class="card-team">
+        <!-- Capa colorida -->
+        <div class="card-team-cover"></div>
+        <!-- Foto do desenvolvedor -->
+        <img class="card-team-image" src="../imagens/dev-joao.png" alt="Imagem de João Gabriel Ferreira">
+        <!-- Linha divisória -->
+        <hr class="team-divider">
+        <!-- Nome do desenvolvedor -->
+        <p class="card-team-name">João Gabriel Ferreira</p>
+        <!-- Cargo ou função -->
+        <p class="card-team-text">Modelador de Dados</p>
+        <!-- Links para redes sociais -->
+        <div class="team-social-media">
+        <a class="team-social-link" href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a class="team-social-link" href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a class="team-social-link" href="#"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+    </section>
+
+    <!-- Cards dos desenvolvedores -->
+    <section class="card-team">
+        <!-- Capa colorida -->
+        <div class="card-team-cover"></div>
+        <!-- Foto do desenvolvedor -->
+        <img class="card-team-image" src="../imagens/dev-jose.png" alt="Imagem de José Henrique Bessa">
+        <!-- Linha divisória -->
+        <hr class="team-divider">
+        <!-- Nome do desenvolvedor -->
+        <p class="card-team-name">José Henrique Bessa</p>
+        <!-- Cargo ou função -->
+        <p class="card-team-text">Designer de Interfaces</p>
+        <!-- Links para redes sociais -->
+        <div class="team-social-media">
+        <a class="team-social-link" href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a class="team-social-link" href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a class="team-social-link" href="#"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+    </section>
+
+    <!-- Cards dos desenvolvedores -->
+    <section class="card-team">
+        <!-- Capa colorida -->
+        <div class="card-team-cover"></div>
+        <!-- Foto do desenvolvedor -->
+        <img class="card-team-image" src="../imagens/dev-natalia.jpg" alt="Imagem de ">
+        <!-- Linha divisória -->
+        <hr class="team-divider">
+        <!-- Nome do desenvolvedor -->
+        <p class="card-team-name">Nome Sobrenome</p>
+        <!-- Cargo ou função -->
+        <p class="card-team-text">Modelador de Dados</p>
+        <!-- Links para redes sociais -->
+        <div class="team-social-media">
+        <a class="team-social-link" href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a class="team-social-link" href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a class="team-social-link" href="#"><i class="fa-brands fa-x-twitter"></i></a>
+    </div>
+    </section>
+</div>
+
+<!-- Container de cards dos desenvolvedores (segunda linha) -->
+    <div class="content-team">
+    <!-- Cards dos desenvolvedores -->
+    <section class="card-team">
+            <!-- Capa colorida -->
+        <div class="card-team-cover"></div>
+        <!-- Foto do desenvolvedor -->
+        <img class="card-team-image" src="../imagens/dev-sophia.png" alt="Imagem de Sophia Cavallaro">
+        <!-- Linha divisória -->
+        <hr class="team-divider">
+        <!-- Nome do desenvolvedor -->
+        <p class="card-team-name">Sophia Cavallaro</p>
+        <!-- Cargo ou função -->
+        <p class="card-team-text">Programador Web</p>
+        <!-- Links para redes sociais -->
+        <div class="team-social-media">
+        <a class="team-social-link" href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a class="team-social-link" href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a class="team-social-link" href="#"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+    </section>
+
+    <!-- Cards dos desenvolvedores -->
+    <section class="card-team">
+            <!-- Capa colorida -->
+        <div class="card-team-cover"></div>
+        <!-- Foto do desenvolvedor -->
+        <img class="card-team-image" src="../imagens/dev-mariana.png" alt="Imagem de Mariana Lourenço">
+        <!-- Linha divisória -->
+        <hr class="team-divider">
+        <!-- Nome do desenvolvedor -->
+        <p class="card-team-name">Mariana Lourenço</p>
+        <!-- Cargo ou função -->
+        <p class="card-team-text">Programador Web</p>
+        <!-- Links para redes sociais -->
+        <div class="team-social-media">
+        <a class="team-social-link" href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a class="team-social-link" href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a class="team-social-link" href="#"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+    </section>
+
+    <!-- Cards dos desenvolvedores -->
+    <section class="card-team">
+            <!-- Capa colorida -->
+        <div class="card-team-cover"></div>
+        <!-- Foto do desenvolvedor -->
+        <img class="card-team-image" src="../imagens/dev-fernanda.jpg" alt="Imagem de ">
+        <!-- Linha divisória -->
+        <hr class="team-divider">
+        <!-- Nome do desenvolvedor -->
+        <p class="card-team-name">Nome Sobrenome</p>
+        <!-- Cargo ou função -->
+        <p class="card-team-text">Modelador de Dados</p>
+        <!-- Links para redes sociais -->
+        <div class="team-social-media">
+        <a class="team-social-link" href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a class="team-social-link" href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a class="team-social-link" href="#"><i class="fa-brands fa-x-twitter"></i></a>
+    </div>
+    </section>
+</div>
+</main>
+
+<!-- Rodapé do site -->
+<footer class="footer">
+
+<!-- Ícones das redes sociais -->
+<div class="footer-social">
+    <a class="footer-social-link" href="#"><i class="fa-brands fa-facebook-f"></i></a>
+    <a class="footer-social-link" href="#"><i class="fa-brands fa-instagram"></i></a>
+    <a class="footer-social-link" href="#"><i class="fa-brands fa-youtube"></i></a>
+    <a class="footer-social-link" href="#"><i class="fa-brands fa-x-twitter"></i></a>
+</div>
+
+<!-- Menu de navegação do rodapé -->
+<ul class="footer-menu">
+    <li class="footer-item">
+    <a class="footer-link" href="../pages/home.html">Home</a></li>
+    <li class="footer-item">
+    <a class="footer-link" href="../pages/sobre.html">Sobre</a></li>
+    <li class="footer-item">
+    <a class="footer-link" href="../pages/perfil.html">Perfil</a></li>
+    <li class="footer-item">
+    <a class="footer-link" href="../pages/login.html">Login</a></li>
+    <li class="footer-item">
+    <a class="footer-link" href="../pages/cadastro.html">Cadastro</a></li>
+    <li class="footer-item">
+    <a class="footer-link" href="../pages/formulario.html">Formulário</a></li>
+</ul>
+</footer>
+
+<!-- Seção de direitos autorais -->
+<div class="copyright">
+<p class="text-copyright">
+    © 2025 MedTrack — Saúde digital com inteligência. Todos os direitos reservados.
+</p>
+</div>
+
+<!-- SEÇÃO DO VLIBRAS-->
+<div vw class="enabled">
+<div vw-access-button class="active"></div>
+<div vw-plugin-wrapper>
+<div class="vw-plugin-top-wrapper"></div>
+</div>
+</div>
+
+<!-- Importa o script-->
+<script src="../js/navbar-mobile.js"></script>
+<script src="../js/modo-escuro.js"></script>
+
+<!-- Importa VLIBRAS-->
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
 </body>
-
 </html>

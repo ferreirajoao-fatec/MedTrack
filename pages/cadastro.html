@@ -2,40 +2,94 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro Medtrack</title>
-    <script src="cadastro.js"></script>
-    <link rel="shortcut icon" href="../imagens/logo.svg" type="image/x-icon">
-    <link rel="stylesheet" href="../css/cadastro.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login Medtrack</title>
 
+<!-- Ícone que aparece na aba do navegador -->
+<link rel="shortcut icon" href="../imagens/logo-escuro.svg" type="image/x-icon">
+
+<!-- Importa o CSS principal da página -->
+<link rel="stylesheet" href="../css/cadastro.css">
+
+<!-- Importa ícones do Font Awesome (usados no botão de modo escuro e na seta de voltar) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+crossorigin="anonymous" referrerpolicy="no-referrer">
 </head>
 
 <body>
-    <div class="cadastro-container" id="cadastro-container">
-        <h1>Medtrack</h1>
-        <p>
-            <label for="nome" id="nome">Nome completo:</label>
-        </p>
-        <input type="text" name="nome" id="txtnome" placeholder="Digite o seu nome.">
-        <p>
-            <label for="e-mail" id="email">E-mail:</label>
-        </p>
-        <input type="text" name="txtemail" id="txtemail" placeholder="Digite o seu e-mail.">
-        <p>
-            <label for="senha" id="senha">Senha:</label>
-        </p>
-        <input type="password" name="senha" id="pwsenha" placeholder="Crie a sua Senha.">
-        <p>
-            <label for="confirme" id="conf">Comfirme a sua senha:</label>
-        </p>
-        <input type="password" name="confirme" id="pwconf" placeholder="Comfirme a sua senha.">
-        <p>
-            <a href="../pages/perfil.html"><button type="submit" id="cad">Cadastrar</button></a>
-            <a href="../pages/home.html"><button type="submit" id="volt">Voltar</button></a>
-        </p>
-        <p class="aqui">Já tem uma conta? Clique <a href="../pages/login.html">Aqui</a></p>
-    </div>
-</body>
+<main>
+<!-- Container principal do login/cadastro -->
+<section class="container-login">
 
+<!-- Container da imagem lateral -->
+<div class="container-imagem">
+<img src="../imagens/imagem-header-cadastro.svg" alt="Imagem da Pagina de Cadastro">
+</div>
+
+<!-- Container do formulário -->
+<div class="container-form">
+
+<!-- Botão para alternar entre modo claro/escuro -->
+<a href="#" id="dark-mode-toggle" class="theme-toggle">
+    <i class="fa-solid fa-moon"></i>
+</a>
+
+<!-- Botão de voltar para a página inicial -->
+<a class="seta" href="../pages/home.html">
+    <i class="fa-solid fa-arrow-left"></i>
+</a>
+
+<!-- Título e subtítulo da página -->
+<h1>Faça seu Cadastro</h1>
+<p class="texto">Seu espaço para cuidar da saúde.</p>
+
+<!-- Formulário de cadastro -->
+<form class="login-form">
+
+    <!-- Campo de e-mail -->
+    <label class="label" for="email">E-mail:</label>
+    <input type="email" id="email" required placeholder="Digite o seu e-mail.">
+
+    <!-- Campo de senha -->
+    <label class="label" for="senha">Senha:</label>
+    <input type="password" id="senha" required placeholder="Digite a sua senha.">
+
+    <!-- OBS: Campos repetidos abaixo, possivelmente um erro a ser removido -->
+    <label class="label" for="email">E-mail:</label>
+    <input type="email" id="email" required placeholder="Digite o seu e-mail.">
+
+    <label class="label" for="senha">Senha:</label>
+    <input type="password" id="senha" required placeholder="Digite a sua senha.">
+
+    <!-- Link para login caso já tenha conta -->
+    <div class="esqueceu-senha">
+        <a href="../pages/login.html">Já tem conta? Entrar</a>
+    </div>
+
+    <!-- Botão de envio do formulário -->
+    <input type="submit">
+</form>
+</div>
+</section>
+
+<!-- SEÇÃO DO VLIBRAS (Acessibilidade para Libras) -->
+<div vw class="enabled">
+<div vw-access-button class="active"></div>
+<div vw-plugin-wrapper>
+<div class="vw-plugin-top-wrapper"></div>
+</div>
+</div>
+</main>
+
+<!-- Script para ativar o modo escuro -->
+<script src="../js/modo-escuro.js"></script>
+
+<!-- Importa e inicializa o plugin VLibras (acessibilidade) -->
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+<script>
+new window.VLibras.Widget('https://vlibras.gov.br/app');
+</script>
+</body>
 </html>

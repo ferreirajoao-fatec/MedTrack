@@ -2,32 +2,97 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Medtrack</title>
-    <link rel="shortcut icon" href="../imagens/logo.svg" type="image/x-icon">
-    <link rel="stylesheet" href="../css/login.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login Medtrack</title>
+
+<!-- Ícone que aparece na aba do navegador -->
+<link rel="shortcut icon" href="../imagens/logo-escuro.svg" type="image/x-icon">
+
+<!-- Importa o CSS principal da página -->
+<link rel="stylesheet" href="../css/login.css">
+
+<!-- Importa ícones do Font Awesome (usados no botão de modo escuro, seta de voltar e ícones sociais) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
 </head>
 
 <body>
-    <div class="container">
-        <div class="login-box">
-            <h1>MedTrack</h1>
-            <form id="login-form">
-                <label for="email">E-mail:</label>
-                <input type="email" id="email" required placeholder="Digite o seu e-email.">
 
-                <label for="senha">Senha:</label>
-                <input type="password" id="senha" required placeholder="Digite a sua senha.">
+<main>
+<!-- Container principal do login -->
+<section class="container-login">
 
-                <button type="button" class="primary"
-                    onclick="window.location.href='../pages/home.html'">Entrar</button>
-                <button type="button" class="secondary"
-                    onclick="window.location.href='../pages/cadastro.html'">Cadastrar</button>
-            </form>
+    <!-- Container da imagem lateral -->
+    <div class="container-imagem">
+        <img src="../imagens/imagem-header-login.svg" alt="Imagem da Pagina de Login">
+    </div>
+
+    <!-- Container do formulário -->
+    <div class="container-form">
+
+        <!-- Botão para alternar entre modo claro/escuro -->
+        <a href="#" id="dark-mode-toggle" class="theme-toggle">
+            <i class="fa-solid fa-moon"></i>
+        </a>
+
+        <!-- Botão de voltar para a página inicial -->
+        <a class="seta" href="../pages/home.html">
+            <i class="fa-solid fa-arrow-left"></i>
+        </a>
+
+        <!-- Título e subtítulo da página -->
+        <h1>Faça seu Login</h1>
+        <p class="texto">Seu espaço para cuidar da saúde.</p>
+
+        <!-- Ícones de login via redes sociais (Google, Facebook, Instagram) -->
+        <div class="icons">
+            <a href=""><i class="fa-brands fa-google"></i></a>
+            <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+        </div>
+
+        <!-- Formulário de login -->
+        <form class="login-form">
+
+            <!-- Campo de e-mail -->
+            <label class="label" for="email">E-mail:</label>
+            <input type="email" id="email" required placeholder="Digite o seu e-mail.">
+
+            <!-- Campo de senha -->
+            <label class="label" for="senha">Senha:</label>
+            <input type="password" id="senha" required placeholder="Digite a sua senha.">
+
+            <!-- Link para recuperação de senha -->
+            <div class="esqueceu-senha">
+                <a href="../pages/cadastro.html">Esqueceu a Senha?</a>
+            </div>
+
+            <!-- Botão de envio do formulário -->
+            <input type="submit">
+        </form>
+    </div>
+
+    <!-- SEÇÃO DO VLIBRAS (Acessibilidade para Libras) -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
         </div>
     </div>
 
-</body>
+</section>
+</main>
 
+<!-- Script para ativar o modo escuro -->
+<script src="../js/modo-escuro.js"></script>
+
+<!-- Importa e inicializa o plugin VLibras (acessibilidade) -->
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+<script>
+new window.VLibras.Widget('https://vlibras.gov.br/app');
+</script>
+
+</body>
 </html>
