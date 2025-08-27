@@ -89,33 +89,33 @@ body.dark-mode .title-header span {
   color: var(--cor-primaria);
 }
 
-body.dark-mode .icon-info-destaque{
-color: var(--cor-secundaria);
-background-color: var(--cor-preto);
-}
-
-body.dark-mode .icon-info-destaque:hover{
-color: var(--cor-preto);
-background-color: var(--cor-primaria);
-}
-
-body.dark-mode .card-team-cover,
-body.dark-mode .team-divider{
-  background-color: var(--cor-primaria);
-}
-
-body.dark-mode .card-team,
-body.dark-mode .card-info-destaque{
-  border: 1px solid var(--cor-preto);
-  /* box-shadow: 0 4px 12px #e9e9e923; */
-}
-
-body.dark-mode .team-social-link{
+body.dark-mode .icon-info-destaque {
   color: var(--cor-secundaria);
   background-color: var(--cor-preto);
 }
 
-body.dark-mode .team-social-link:hover{
+body.dark-mode .icon-info-destaque:hover {
+  color: var(--cor-preto);
+  background-color: var(--cor-primaria);
+}
+
+body.dark-mode .card-team-cover,
+body.dark-mode .team-divider {
+  background-color: var(--cor-primaria);
+}
+
+body.dark-mode .card-team,
+body.dark-mode .card-info-destaque {
+  border: 1px solid var(--cor-preto);
+  /* box-shadow: 0 4px 12px #e9e9e923; */
+}
+
+body.dark-mode .team-social-link {
+  color: var(--cor-secundaria);
+  background-color: var(--cor-preto);
+}
+
+body.dark-mode .team-social-link:hover {
   color: var(--cor-preto);
   background-color: var(--cor-primaria);
 }
@@ -125,20 +125,25 @@ body.dark-mode .copyright {
   background-color: var(--cor-preto);
 }
 
+body.dark-mode .copyright {
+  border-top: 1px solid var(--cor-cinza);
+}
+
+
 body.dark-mode .text-copyright,
 body.dark-mode .navbar,
 body.dark-mode .footer-link {
   color: var(--cor-branco);
 }
 
-body.dark-mode .footer-social-link{
-background-color: var(--cor-branco);
-color: var(--cor-preto);
+body.dark-mode .footer-social-link {
+  background-color: var(--cor-branco);
+  color: var(--cor-preto);
 }
 
-body.dark-mode .footer-social-link:hover{
-background-color: var(--cor-secundaria);
-color: var(--cor-branco);
+body.dark-mode .footer-social-link:hover {
+  background-color: var(--cor-secundaria);
+  color: var(--cor-branco);
 }
 
 body.dark-mode .footer-link:hover {

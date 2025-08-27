@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Ícones (Font Awesome) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+crossorigin="anonymous" referrerpolicy="no-referrer">
+<!-- Estilos personalizados -->
+<link rel="stylesheet" href="../css/pagin_perfis.css">
+
+<!-- Favicon -->
+<link rel="shortcut icon" href="../imagens/logo-escuro.svg" type="image/x-icon">
+<title>Perfis do Medtrack</title>
+</head>
+
+<body>
+<main>
+<section class="cards">
+
+<!-- Lucas Fernandes -->
+<article class="card" tabindex="0" onclick="window.location.href='home.html'">
+<div class="banner"></div>
+<div class="avatar"><img alt="Foto de perfil de Lucas Fernandes" src="/imagens/imagem-perfil1.jpg"></div>
+<div class="body">
+<div class="name">Lucas Fernandes <span class="age">23</span></div>
+<div class="city">Matão</div>
+<div class="stats">
+<div class="stat"><div class="num">1.78M</div><div class="label">Altura</div></div>
+<div class="stat"><div class="num">72 Kg</div><div class="label">Peso</div></div>
+<div class="stat"><div class="num">22,7</div><div class="label">IMC</div></div>
+</div>
+</div>
+</article>
+
+<!-- Camila Sato -->
+<article class="card" tabindex="0" onclick="window.location.href='home.html'">
+<div class="banner"></div>
+<div class="avatar"><img alt="Foto de perfil de Camila Sato" src="/imagens/imagem-perfil2.jpg"></div>
+<div class="body">
+<div class="name">Camila Sato <span class="age">29</span></div>
+<div class="city">Matão</div>
+<div class="stats">
+<div class="stat"><div class="num">1.65M</div><div class="label">Altura</div></div>
+<div class="stat"><div class="num">58 Kg</div><div class="label">Peso</div></div>
+<div class="stat"><div class="num">21,3</div><div class="label">IMC</div></div>
+</div>
+</div>
+</article>
+
+<!-- Antônio Ribeiro -->
+<article class="card" tabindex="0" onclick="window.location.href='home.html'">
+<div class="banner"></div>
+<div class="avatar"><img alt="Foto de perfil de Antônio Ribeiro" src="/imagens/imagem-perfil3.jpg"></div>
+<div class="body">
+<div class="name">Antônio Ribeiro <span class="age">70</span></div>
+<div class="city">Matão</div>
+<div class="stats">
+<div class="stat"><div class="num">1.72M</div><div class="label">Altura</div></div>
+<div class="stat"><div class="num">75 Kg</div><div class="label">Peso</div></div>
+<div class="stat"><div class="num">25,3</div><div class="label">IMC</div></div>
+</div>
+</div>
+</article>
+
+<!-- Júlia Martins -->
+<article class="card" tabindex="0" onclick="window.location.href='home.html'">
+<div class="banner"></div>
+<div class="avatar"><img alt="Foto de perfil de Júlia Martins" src="/imagens/imagem-perfil4.jpg"></div>
+<div class="body">
+<div class="name">Júlia Martins <span class="age">26</span></div>
+<div class="city">Matão</div>
+<div class="stats">
+<div class="stat"><div class="num">1.63M</div><div class="label">Altura</div></div>
+<div class="stat"><div class="num">60 Kg</div><div class="label">Peso</div></div>
+<div class="stat"><div class="num">22,6</div><div class="label">IMC</div></div>
+</div>
+</div>
+</article>
+
+</section>
+</main>
+
+<!-- SEÇÃO DO VLIBRAS-->
+<div vw class="enabled">
+<div vw-access-button class="active"></div>
+<div vw-plugin-wrapper>
+<div class="vw-plugin-top-wrapper"></div>
+</div>
+</div>
+
+<!-- Importa o script-->
+<script src="../js/modo-escuro.js"></script>
+
+<!-- Importa VLIBRAS-->
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+<script>
+new window.VLibras.Widget('https://vlibras.gov.br/app');
+</script>
+</body>
+</html>
