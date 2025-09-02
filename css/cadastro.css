@@ -54,6 +54,15 @@
 }
 
 /* ---------------- MODO ESCURO ---------------- */
+
+body.dark-mode #dark-mode-toggle {
+  background-color: var(--cor-secundaria);
+}
+
+body.dark-mode #dark-mode-toggle:hover {
+  background-color: var(--cor-primaria);
+}
+
 body.dark-mode {
   background-color: #121212;
   color: #e2e2e2;
@@ -114,8 +123,9 @@ body.dark-mode .seta:hover {
   background-color: var(--cor-primaria);
 }
 
-
-
+body.dark-mode .esqueceu-senha a:hover{
+  color: var(--cor-primaria);
+}
 
 body,
 html {

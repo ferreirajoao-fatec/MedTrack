@@ -20,16 +20,6 @@
   --cor-branco: #e2e2e2;
 }
 
-/* ---------------- MODO ESCURO ---------------- */
-
-.dark-mode {
-  --cor-preto: #e2e2e2;
-  --cor-primaria: #00c9a7;
-  --cor-secundaria: #00695c;
-  --cor-cinza: #b4bec9;
-  --cor-branco: #121212;
-}
-
 /* ---------------- BODY ---------------- */
 body {
   background-color: var(--cor-branco);
@@ -37,6 +27,30 @@ body {
   min-height: 100vh;
   line-height: 1.5;
   letter-spacing: 0.5px;
+}
+
+/* Botão flutuante "Voltar ao Topo" */
+#btnTopo {
+  display: none;
+  /* escondido por padrão */
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: var(--cor-primaria);
+  color: var(--cor-branco);
+  cursor: pointer;
+  padding: 12px 16px;
+  border-radius: 50%;
+  font-size: 18px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+  transition: background 0.3s;
+}
+
+#btnTopo:hover {
+  background-color: var(--cor-secundaria);
 }
 
 /* Botão de alternar modo escuro/claro */
@@ -65,6 +79,26 @@ body {
 
 #dark-mode-toggle i {
   pointer-events: none;
+}
+
+/* ---------------- MODO ESCURO ---------------- */
+
+.dark-mode {
+  --cor-preto: #e2e2e2;
+  --cor-primaria: #00c9a7;
+  --cor-secundaria: #00695c;
+  --cor-cinza: #b4bec9;
+  --cor-branco: #121212;
+}
+
+body.dark-mode #btnTopo {
+  background-color: var(--cor-preto);
+  color: var(--cor-secundaria);
+}
+
+body.dark-mode #btnTopo:hover {
+  background-color: var(--cor-cinza);
+  color: var(--cor-branco);
 }
 
 body.dark-mode .navbar-btn-item {

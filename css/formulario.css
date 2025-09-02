@@ -28,6 +28,7 @@
 }
 
 /* ---------------- BOTÃO MODO ESCURO/CLARO DENTRO DO FORM ---------------- */
+
 #dark-mode-toggle {
   position: absolute;
   top: 0px;
@@ -36,7 +37,6 @@
   height: 45px;
   background-color: var(--cor-primaria);
   color: var(--cor-branco);
-  
   display: flex;
   align-items: center;
   justify-content: center;
@@ -54,6 +54,15 @@
 }
 
 /* ---------------- MODO ESCURO ---------------- */
+
+body.dark-mode #dark-mode-toggle {
+  background-color: var(--cor-secundaria);
+}
+
+body.dark-mode #dark-mode-toggle:hover {
+  background-color: var(--cor-primaria);
+}
+
 body.dark-mode {
   background-color: #121212;
   color: #e2e2e2;
@@ -92,7 +101,7 @@ body.dark-mode .login-form textarea::placeholder {
 
 body.dark-mode input[type=submit] {
   background-color: var(--cor-secundaria);
-  color: #fff;
+  color: #000000;
 }
 
 body.dark-mode input[type=submit]:hover {
