@@ -36,7 +36,7 @@
   height: 45px;
   background-color: var(--cor-primaria);
   color: var(--cor-branco);
-  
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -46,7 +46,7 @@
   border: none;
   box-shadow: 0 2px 8px #0000001a;
   transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
-  z-index: 10; 
+  z-index: 10;
 }
 
 #dark-mode-toggle:hover {
@@ -123,7 +123,7 @@ body.dark-mode .seta:hover {
   background-color: var(--cor-primaria);
 }
 
-body.dark-mode .esqueceu-senha a:hover{
+body.dark-mode .esqueceu-senha a:hover {
   color: var(--cor-primaria);
 }
 
@@ -185,8 +185,9 @@ main {
 h1 {
   text-align: center;
   color: var(--cor-primaria);
-  font-size: 32px;
   margin: 10px 0;
+  font-family: var(--fonte-spectral);
+  font-size: 36px;
 }
 
 .texto {

@@ -357,7 +357,7 @@ body {
   height: auto;
   max-height: 500px;
   width: 100%;
-  height: 450px;
+  height: 400px;
   background-image: url(../imagens/imagem-fundo-circulo.svg);
   background-position: center;
   background-repeat: no-repeat;
@@ -398,6 +398,7 @@ body {
   font-size: 40px;
   font-weight: bold;
   transition: color 0.6s ease, transform 0.6s ease;
+  font-family: var(--fonte-karla);
 }
 
 .header-number:hover {
@@ -416,8 +417,9 @@ body {
 /* Título da Seção */
 .title-card-info {
   text-align: center;
-  font-size: 30px;
   padding: 30px 0 10px 0;
+  font-family: var(--fonte-spectral);
+  font-size: 40px;
 }
 
 /* Container dos Cards de Destaque */
@@ -481,8 +483,9 @@ body {
 /* Título da Seção */
 .title-card-team {
   text-align: center;
-  font-size: 30px;
   padding: 10px 0;
+  font-family: var(--fonte-spectral);
+  font-size: 40px;
 }
 
 .content-team {
@@ -578,6 +581,144 @@ body {
   background-color: var(--cor-preto);
   color: var(--cor-cinza);
   transform: scale(1.05);
+}
+
+/* ---------------- SEÇÃO DE FAQ ---------------- */
+
+.section-faq {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0 3rem 0;
+}
+
+.wrap {
+  width: 100%;
+  max-width: 95%;
+  margin: 0 auto;
+  padding: 0 16px; 
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.faq {
+  background: var(--cor-branco);
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 12px;
+  box-shadow: 0 8px 20px #00000014;
+}
+
+.item {
+  border-bottom: 1px solid #e0e0e0;
+  transition: background 0.3s ease;
+}
+
+.item:last-child {
+  border-bottom: none;
+}
+
+.accordion-trigger {
+  width: 100%;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  background: transparent;
+  border: none;
+  color: inherit;
+  padding: 18px 16px;
+  font: inherit;
+  cursor: pointer;
+  border-radius: 12px;
+  transition: background 0.25s ease, transform 0.2s ease;
+}
+
+.accordion-trigger:hover {
+  background: var(--cor-cinza);
+  transform: translateY(-1px);
+}
+
+.accordion-trigger:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 4px var(--cor-primaria);
+  background: var(--cor-cinza);
+}
+
+.question {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.icon {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 1px solid var(--cor-primaria);
+  background: var(--cor-primaria);
+  font-size: 16px;
+  color: var(--cor-branco);
+  position: relative;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+.icon i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.25s ease;
+}
+
+.icon i.minus {
+  opacity: 0;
+}
+
+.accordion-trigger[aria-expanded="true"] .icon {
+  background: var(--cor-primaria);
+  color: var(--cor-branco);
+}
+
+.accordion-trigger[aria-expanded="true"] .icon i.plus {
+  opacity: 0;
+}
+
+.accordion-trigger[aria-expanded="true"] .icon i.minus {
+  opacity: 1;
+}
+
+.panel {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.35s ease;
+}
+
+.panel-inner {
+  padding: 16px 20px 20px 20px; 
+  color: var(--cor-preto);
+  font-size: 1rem; 
+  line-height: 1.7;
+  transition: color 0.25s ease;
+}
+
+
+@media (max-width: 480px) {
+  .accordion-trigger {
+    padding: 16px 14px;
+  }
+
+  .panel-inner {
+    padding: 0 14px 16px 14px;
+  }
+
+  .faq {
+    border-radius: 14px;
+  }
 }
 
 /* ---------------- SEÇÃO DE RODAPÉ ---------------- */
@@ -702,7 +843,6 @@ body {
     margin-top: 20px;
   }
 
-
   .header-info {
     flex-direction: column;
     align-items: center;
@@ -713,6 +853,8 @@ body {
   .header-number {
     text-align: center;
     font-size: 32px;
+    font-family: var(--fonte-karla);
+    font-weight: bold;
   }
 
   .header-info-text {

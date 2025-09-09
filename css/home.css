@@ -387,6 +387,7 @@ body.dark-mode .footer-link:hover {
   font-size: 40px;
   font-weight: bold;
   transition: color 0.6s ease, transform 0.6s ease;
+  font-family: var(--fonte-karla);
 }
 
 .header-number:hover {
@@ -406,8 +407,9 @@ body.dark-mode .footer-link:hover {
 /* Título da Seção */
 .title-card-info {
   text-align: center;
-  font-size: 30px;
   padding: 30px 0 10px 0;
+  font-family: var(--fonte-spectral);
+  font-size: 40px;
 }
 
 /* Container dos Cards de Destaque */
@@ -473,8 +475,9 @@ body.dark-mode .footer-link:hover {
 /* Título geral da seção de testemunhos */
 .title-card-testimonial {
   text-align: center;
-  font-size: 30px;
-  padding: 20px 0;
+  padding: 10px 0px;
+  font-family: var(--fonte-spectral);
+  font-size: 40px;
 }
 
 /* Container que agrupa todos os cards de testemunhos */

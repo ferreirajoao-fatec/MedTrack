@@ -63,7 +63,7 @@ body.dark-mode #dark-mode-toggle:hover {
   background-color: var(--cor-primaria);
 }
 
-body.dark-mode .esqueceu-senha a:hover{
+body.dark-mode .esqueceu-senha a:hover {
   color: var(--cor-primaria);
 }
 
@@ -185,8 +185,9 @@ main {
 h1 {
   text-align: center;
   color: var(--cor-primaria);
-  font-size: 32px;
   margin: 20px 0 9px 0;
+  font-family: var(--fonte-spectral);
+  font-size: 36px;
 }
 
 .texto {
