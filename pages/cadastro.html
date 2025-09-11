@@ -33,12 +33,12 @@ crossorigin="anonymous" referrerpolicy="no-referrer">
 
 <!-- Botão para alternar entre modo claro/escuro -->
 <a href="#" id="dark-mode-toggle" class="theme-toggle">
-    <i class="fa-solid fa-moon"></i>
+<i class="fa-solid fa-moon"></i>
 </a>
 
 <!-- Botão de voltar para a página inicial -->
 <a class="seta" href="../pages/home.html">
-    <i class="fa-solid fa-arrow-left"></i>
+<i class="fa-solid fa-arrow-left"></i>
 </a>
 
 <!-- Título e subtítulo da página -->
@@ -48,28 +48,33 @@ crossorigin="anonymous" referrerpolicy="no-referrer">
 <!-- Formulário de cadastro -->
 <form class="login-form">
 
-    <!-- Campo de e-mail -->
-    <label class="label" for="email">E-mail:</label>
-    <input type="email" id="email" required placeholder="Digite o seu e-mail.">
+<!-- Campo de Nome Completo -->
+<label class="label" for="nome">Nome Completo:</label>
+<input type="text" id="nome" required placeholder="Digite o seu nome completo.">
 
-    <!-- Campo de senha -->
-    <label class="label" for="senha">Senha:</label>
-    <input type="password" id="senha" required placeholder="Digite a sua senha.">
 
-    <!-- OBS: Campos repetidos abaixo, possivelmente um erro a ser removido -->
-    <label class="label" for="email">E-mail:</label>
-    <input type="email" id="email" required placeholder="Digite o seu e-mail.">
+<label class="label" for="email">E-mail:</label>
+<input type="email" id="email" required placeholder="Digite o seu e-mail.">
 
-    <label class="label" for="senha">Senha:</label>
-    <input type="password" id="senha" required placeholder="Digite a sua senha.">
 
-    <!-- Link para login caso já tenha conta -->
-    <div class="esqueceu-senha">
-        <a href="../pages/login.html">Já tem conta? Entrar</a>
-    </div>
+<!-- Campo de e-mail -->
+<label class="label" for="email">Repetir E-mail:</label>
+<input type="email" id="email" required placeholder="Digite o seu e-mail.">
 
-    <!-- Botão de envio do formulário -->
-    <input type="submit">
+<!-- Campo de senha -->
+<label class="label" for="senha">Senha:</label>
+<input type="password" id="senha" required placeholder="Digite a sua senha.">
+
+<label class="label" for="senha">Repetir Senha:</label>
+<input type="password" id="senha" required placeholder="Digite a sua senha.">
+
+<!-- Link para login caso já tenha conta -->
+<div class="esqueceu-senha">
+<a href="../pages/login.html">Já tem conta? Entrar</a>
+</div>
+
+<!-- Botão de envio do formulário -->
+<input type="submit">
 </form>
 </div>
 </section>
