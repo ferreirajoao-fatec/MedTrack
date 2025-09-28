@@ -6,89 +6,105 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Login Medtrack</title>
 
-<!-- Ícone que aparece na aba do navegador -->
+<!-- Ícone da aba -->
 <link rel="shortcut icon" href="../imagens/logo-escuro.svg" type="image/x-icon">
 
-<!-- Importa o CSS principal da página -->
-<link rel="stylesheet" href="../css/login.css">
+<!-- Bootstrap 5.3.8 -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
-<!-- Importa ícones do Font Awesome (usados no botão de modo escuro, seta de voltar e ícones sociais) -->
+<!-- Seu CSS -->
+<link rel="stylesheet" href="../css/auth.css">
+
+<!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer">
+integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+crossorigin="anonymous" referrerpolicy="no-referrer">
 </head>
 
 <body>
+<main class="d-flex align-items-center justify-content-center min-vh-100">
+<!-- Container principal -->
+<section class="container-login d-flex flex-wrap shadow rounded overflow-hidden">
 
-<main>
-<!-- Container principal do login -->
-<section class="container-login">
+<!-- Coluna imagem -->
+<div class="container-imagem-1 d-flex align-items-center justify-content-center p-3 col-12 col-md-6">
+<img src="../imagens/imagem-header-login.svg" alt="Imagem da Página de Login"
+class="img-fluid rounded">
+</div>
 
-    <!-- Container da imagem lateral -->
-    <div class="container-imagem">
-        <img src="../imagens/imagem-header-login.svg" alt="Imagem da Pagina de Login">
-    </div>
+<!-- Coluna formulário -->
+<div class="container-form position-relative col-12 col-md-6 p-4">
 
-    <!-- Container do formulário -->
-    <div class="container-form">
+<!-- Botão modo escuro -->
+<a href="#" id="dark-mode-toggle"
+class="theme-toggle btn btn-sm rounded-circle d-flex align-items-center justify-content-center">
+<i class="fa-solid fa-moon"></i>
+</a>
 
-        <!-- Botão para alternar entre modo claro/escuro -->
-        <a href="#" id="dark-mode-toggle" class="theme-toggle">
-            <i class="fa-solid fa-moon"></i>
-        </a>
+<!-- Botão voltar -->
+<a class="seta btn btn-sm d-flex align-items-center justify-content-center" href="../pages/home.html">
+<i class="fa-solid fa-arrow-left"></i>
+</a>
 
-        <!-- Botão de voltar para a página inicial -->
-        <a class="seta" href="../pages/home.html">
-            <i class="fa-solid fa-arrow-left"></i>
-        </a>
+<!-- Título -->
+<h1 class="text-center title-form mt-5">FAÇA SEU LOGIN</h1>
+<p class="texto text-center">Seu espaço para cuidar da saúde.</p>
 
-        <!-- Título e subtítulo da página -->
-        <h1>Faça seu Login</h1>
-        <p class="texto">Seu espaço para cuidar da saúde.</p>
 
-        <!-- Ícones de login via redes sociais (Google, Facebook, Instagram) -->
-        <div class="icons">
-            <a href=""><i class="fa-brands fa-google"></i></a>
-            <a href=""><i class="fa-brands fa-facebook-f"></i></a>
-            <a href=""><i class="fa-brands fa-instagram"></i></a>
-        </div>
+<!-- Ícones de login via redes sociais -->
+<div class="icons">
+<a href="#"><i class="fa-brands fa-google"></i></a>
+<a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+<a href="#"><i class="fa-brands fa-instagram"></i></a>
+</div>
 
-        <!-- Formulário de login -->
-        <form class="login-form">
+<!-- Formulário -->
+<form class="login-form">
 
-            <!-- Campo de e-mail -->
-            <label class="label" for="email">E-mail:</label>
-            <input type="email" id="email" required placeholder="Digite o seu e-mail.">
+<div class="mb-2">
+<label for="email" class="form-label">E-mail:</label>
+<input type="email" id="email" name="email" class="form-control"
+placeholder="Digite o seu e-mail." required>
+</div>
 
-            <!-- Campo de senha -->
-            <label class="label" for="senha">Senha:</label>
-            <input type="password" id="senha" required placeholder="Digite a sua senha.">
+<div class="mb-2">
+<label for="senha" class="form-label">Senha:</label>
+<input type="password" id="senha" name="senha" class="form-control"
+placeholder="Digite a sua senha." required>
+</div>
 
-            <!-- Link para recuperação de senha -->
-            <div class="esqueceu-senha">
-                <a href="../pages/cadastro.html">Esqueceu a Senha?</a>
-            </div>
+<!-- Link login -->
+<div class="esqueceu-senha text-end mb-2">
+<a href="../pages/login.html">Esqueceu a senha?</a>
+</div>
 
-            <!-- Botão de envio do formulário -->
-            <input type="submit">
-        </form>
-    </div>
+<!-- Botão enviar -->
+<button type="submit" class="btn w-100">Entrar</button>
 
-    <!-- SEÇÃO DO VLIBRAS (Acessibilidade para Libras) -->
-    <div vw class="enabled">
-        <div vw-access-button class="active"></div>
-        <div vw-plugin-wrapper>
-            <div class="vw-plugin-top-wrapper"></div>
-        </div>
-    </div>
 
+<!-- Link login -->
+<div class="esqueceu-senha text-end mb-2">
+<a href="../pages/cadastro.html">Não tem conta? Cadastre-se</a>
+</div>
+
+</form>
+</div>
 </section>
+
+<!-- VLibras -->
+<div vw class="enabled">
+<div vw-access-button class="active"></div>
+<div vw-plugin-wrapper>
+<div class="vw-plugin-top-wrapper"></div>
+</div>
+</div>
 </main>
 
-<!-- Script para ativar o modo escuro -->
+<!-- Script modo escuro -->
 <script src="../js/modo-escuro.js"></script>
 
-<!-- Importa e inicializa o plugin VLibras (acessibilidade) -->
+<!-- VLibras -->
 <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
 <script>
 new window.VLibras.Widget('https://vlibras.gov.br/app');

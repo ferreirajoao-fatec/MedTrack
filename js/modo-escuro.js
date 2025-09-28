@@ -6,8 +6,8 @@ const body = document.body;
 const logo = document.querySelector('.navbar-logo');
 
 // Caminhos das imagens para os modos
-const logoLight = "../imagens/logo-claro.svg"; // imagem para modo claro
-const logoDark = "../imagens/logo-escuro.svg"; // imagem para modo escuro
+const logoLight = "../imagens/logo-escuro.svg"; // imagem para modo claro
+const logoDark = "../imagens/logo-claro.svg"; // imagem para modo escuro
 
 // Verifica se o usuário já tem preferência salva
 if (localStorage.getItem('darkMode') === 'enabled') {
