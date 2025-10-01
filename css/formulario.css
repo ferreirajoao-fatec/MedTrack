@@ -10,21 +10,21 @@
   --fonte-montserrat: "Montserrat", sans-serif;
   --fonte-karla: "Karla", sans-serif;
   --fonte-spectral: "Spectral", serif;
-  --cor-primaria: #00785E;
-  --cor-secundaria: #00B08A;
-  --cor-cinza: #b4bec9;
-  --cor-branco: #e2e2e2;
-  --cor-preto: #00251F;
+  --cor-preto: #000000;
+  --cor-primaria: #00614C;
+  --cor-secundaria: #00AD88;
+  --cor-cinza: #B4BEC9;
+  --cor-branco: #FAFAFA;
 }
 
 /* ---------------- MODO ESCURO ---------------- */
 
-.dark-mode {
-  --cor-preto: #e2e2e2;
-  --cor-primaria: #00c9a7;
-  --cor-secundaria: #00695c;
-  --cor-cinza: #b4bec9;
-  --cor-branco: #121212;
+body.dark-mode {
+  --cor-preto: #FAFAFA;
+  --cor-primaria: #00AD88;
+  --cor-secundaria: #00614C;
+  --cor-cinza: #B4BEC9;
+  --cor-branco: #000000;
 }
 
 /* ---------------- BOTÃO MODO ESCURO/CLARO DENTRO DO FORM ---------------- */
@@ -46,7 +46,7 @@
   border: none;
   box-shadow: 0 2px 8px #0000001a;
   transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
-  z-index: 10; 
+  z-index: 10;
 }
 
 #dark-mode-toggle:hover {
@@ -96,7 +96,8 @@ body.dark-mode .login-form textarea {
 
 body.dark-mode .login-form input::placeholder,
 body.dark-mode .login-form textarea::placeholder {
-  color: #ccc; /* placeholder mais visível em dark mode */
+  color: #ccc;
+  /* placeholder mais visível em dark mode */
 }
 
 body.dark-mode input[type=submit] {
@@ -186,7 +187,7 @@ h1 {
   color: var(--cor-primaria);
   font-size: 40px;
   margin: 10px 0;
-  font-family:var(--fonte-spectral);
+  font-family: var(--fonte-spectral);
 }
 
 .texto {
