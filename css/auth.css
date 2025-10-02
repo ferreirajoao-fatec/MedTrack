@@ -40,7 +40,8 @@ body.dark-mode .title-form,
 body.dark-mode .texto,
 body.dark-mode .form-label,
 body.dark-mode .esqueceu-senha a,
-body.dark-mode input.form-control {
+body.dark-mode input.form-control,
+body.dark-mode summary {
     color: var(--cor-preto);
 }
 
@@ -165,6 +166,13 @@ main {
     font-size: 40px;
     margin-bottom: 10px;
     font-weight: 700;
+    text-transform: uppercase;
+}
+
+.summary {
+    font-size: 18px;
+    font-family: var(--fonte-karla);
+    font-weight: 600;
 }
 
 .texto {
@@ -196,30 +204,107 @@ main {
     border-color: var(--cor-cinza);
 }
 
-/* ---------------- Ícones dentro dos inputs ---------------- */
-input#nome,
-input#cpf {
-    background: url('../imagens/text.svg') no-repeat 10px center;
+
+input#senha,
+input#confirmar-senha {
+    background: url('../imagens/senha.svg') no-repeat 10px center;
+    background-size: 23px;
+    padding-left: 40px;
+    border: 1px solid #dbdbdb;
 }
 
 input#email,
 input#confirmar-email {
     background: url('../imagens/email.svg') no-repeat 10px center;
+    background-size: 23px;
+    padding-left: 40px;
+    border: 1px solid #dbdbdb;
 }
 
-input#senha,
-input#confirmar-senha {
-    background: url('../imagens/senha.svg') no-repeat 10px center;
+input#dataNascimento,
+input#frequencia {
+    background: url('../imagens/calendar-days-solid-full.svg') no-repeat 10px center;
+    background-size: 23px;
+    padding-left: 40px;
+    border: 1px solid #dbdbdb;
+}
+
+input#sus,
+input#nomeContato,
+input#altura{
+    background: url('../imagens/chart-simple-solid-full.svg') no-repeat 10px center;
+    background-size: 23px;
+    padding-left: 40px;
+    border: 1px solid #dbdbdb;
 }
 
 input#nome,
-input#cpf,
-input#email,
-input#confirmar-email,
-input#senha,
-input#confirmar-senha {
-    background-size: 25px;
+input#cpf {
+    background: url('../imagens/text.svg') no-repeat 10px center;
+    background-size: 23px;
     padding-left: 40px;
+    border: 1px solid #dbdbdb;
+}
+
+input#peso,
+input#medicamento {
+    background: url('../imagens/shop-solid-full.svg') no-repeat 10px center;
+    background-size: 23px;
+    padding-left: 40px;
+    border: 1px solid #dbdbdb;
+}
+
+input#telefoneContato,
+input#relacionamento,
+input#dosagem {
+    background: url('../imagens/suitcase-medical-solid-full.svg') no-repeat 10px center;
+    background-size: 23px;
+    padding-left: 40px;
+    border: 1px solid #dbdbdb;
+}
+
+select#sexo,
+select#tipo-sanguineo {
+    background: url('../imagens/bars-solid-full.svg') no-repeat 10px center;
+    background-size: 23px;
+    padding-left: 40px;
+    background-color: var(--cor-branco);
+    border: 1px solid #dbdbdb;
+    border-radius: 5px;
+    height: 40px;
+    color: #212121;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+body.dark-mode select#sexo,
+body.dark-mode select#tipo-sanguineo{
+    color: var(--cor-preto);
+}
+
+select#sexo option[disabled][selected],
+select#tipo-sanguineo option[disabled][selected] {
+    color: #757575;
+}
+
+select#sexo::after,
+select#tipo-sanguineo::after {
+    content: "\f078";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+textarea#observacoes {
+    background: url('../imagens/envelope-solid-full.svg') no-repeat 10px 10px;
+    background-size: 23px;
+    padding-left: 40px;
+    padding-top: 10px;
     border: 1px solid #dbdbdb;
 }
 
@@ -392,10 +477,20 @@ input#confirmar-senha {
 
     input#nome,
     input#cpf,
+    input#dataNascimento,
     input#email,
     input#confirmar-email,
     input#senha,
-    input#confirmar-senha {
+    input#confirmar-senha,
+    input#altura,
+    input#peso,
+    input#sus,
+    input#nomeContato,
+    input#telefoneContato,
+    input#relacionamento,
+    input#medicamento,
+    input#dosagem,
+    input#frequencia {
         background-size: 18px;
         padding-left: 30px;
     }
@@ -458,10 +553,20 @@ input#confirmar-senha {
 
     input#nome,
     input#cpf,
+    input#dataNascimento,
     input#email,
     input#confirmar-email,
     input#senha,
-    input#confirmar-senha {
+    input#confirmar-senha,
+    input#altura,
+    input#peso,
+    input#sus,
+    input#nomeContato,
+    input#telefoneContato,
+    input#relacionamento,
+    input#medicamento,
+    input#dosagem,
+    input#frequencia {
         background-size: 20px;
         padding-left: 35px;
     }
