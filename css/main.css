@@ -30,6 +30,17 @@ main {
     --cor-branco: #FAFAFA;
 }
 
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(1);
+}
+
+
+body.dark-mode .carousel-control-prev-icon,
+body.dark-mode .carousel-control-next-icon {
+    filter: invert(0);
+}
+
 /* Botão flutuante "Voltar ao Topo" */
 
 #btnTopo {
@@ -636,6 +647,7 @@ body.dark-mode .footer-social-link:hover {
     padding: 15px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     overflow: hidden;
+    margin-bottom: 5px;
 }
 
 .card-testimonial:hover {

@@ -31,7 +31,7 @@ body.dark-mode {
 
 #dark-mode-toggle {
   position: absolute;
-  top: 0px;
+  top: 0;
   left: 0;
   width: 45px;
   height: 45px;
@@ -228,7 +228,6 @@ h1 {
   color: var(--cor-preto);
 }
 
-
 .seta {
   position: absolute;
   top: 0;
@@ -250,28 +249,11 @@ h1 {
   background-color: var(--cor-secundaria);
 }
 
-/* Ícones de input */
-input[type=email] {
-  background-image: url("/imagens/email.svg");
+input[type="email"],
+input[type="text"],
+input[type="number"] {
+  background: url("/imagens/email.svg") no-repeat 10px center;
   background-size: 20px;
-  background-position: 10px center;
-  background-repeat: no-repeat;
-  padding-left: 40px;
-}
-
-input[type=text] {
-  background-image: url("/imagens/email.svg");
-  background-size: 20px;
-  background-position: 10px center;
-  background-repeat: no-repeat;
-  padding-left: 40px;
-}
-
-input[type=number] {
-  background-image: url("/imagens/email.svg");
-  background-size: 20px;
-  background-position: 10px center;
-  background-repeat: no-repeat;
   padding-left: 40px;
 }
 
