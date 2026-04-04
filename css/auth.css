@@ -8,6 +8,33 @@
     box-sizing: border-box;
 }
 
+/* Campo com erro */
+.input-erro {
+  border: 2px solid #dc3545 !important;
+}
+
+/* Campo correto */
+.input-sucesso {
+  border: 2px solid #198754 !important;
+}
+
+/* Mensagem de erro */
+.mensagem-erro {
+  color: #dc3545;
+  font-size: 0.85rem;
+  margin-top: 3px;
+}
+
+/* Mensagem de sucesso geral */
+.mensagem-sucesso {
+  background: #d1e7dd;
+  color: #0f5132;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+  text-align: center;
+}
+
 :root {
     --fonte-montserrat: "Montserrat", sans-serif;
     --fonte-karla: "Karla", sans-serif;

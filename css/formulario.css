@@ -352,3 +352,58 @@ input[type=submit]:hover {
     padding: 8px;
   }
 }
+
+/* Campos do formulário */
+input,
+select,
+textarea {
+  transition: 0.2s ease;
+}
+
+/* Quando o campo estiver com erro */
+input.erro,
+select.erro,
+textarea.erro {
+  border: 2px solid #dc3545;
+  background-color: #fff5f5;
+}
+
+/* Mensagem de erro abaixo do campo */
+.erro-msg {
+  color: #dc3545;
+  font-size: 0.85rem;
+  margin-top: 4px;
+}
+
+/* Mensagem geral do formulário */
+.mensagem-form {
+  margin-top: 15px;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* Sucesso */
+.mensagem-sucesso {
+  color: #198754;
+}
+
+/* Erro geral */
+.mensagem-erro {
+  color: #dc3545;
+}
+
+/* Campo válido (opcional - melhora UX) */
+input.valido,
+select.valido,
+textarea.valido {
+  border: 2px solid #198754;
+  background-color: #f6fff8;
+}
+
+/* Foco no campo */
+input:focus,
+select:focus,
+textarea:focus {
+  box-shadow: none !important;
+  border-color: #0d6efd;
+}

@@ -8,6 +8,138 @@
     box-sizing: border-box;
 }
 
+/* ===============================
+   FOCO VISÍVEL PARA ACESSIBILIDADE
+   =============================== */
+
+/* Todos os elementos interativos padrão */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+    outline: 3px solid #1abc9c;
+    /* cor turquesa chamativa */
+    outline-offset: 2px;
+    transition: outline 0.2s ease-in-out;
+}
+
+/* Cards interativos ou clicáveis */
+.card-info-destaque:focus,
+.card-testimonial:focus,
+.emergency-card:focus {
+    outline: 3px solid #f39c12;
+    /* cor laranja para diferenciar do contorno padrão */
+    outline-offset: 4px;
+    transition: outline 0.2s ease-in-out;
+}
+
+/* Ícones clicáveis (como perfil, menu, modo escuro) */
+.navbar-btn-item:focus,
+.navbar-btn-profile:focus,
+#dark-mode-toggle:focus,
+#nav-btn-toggle:focus {
+    outline: 3px solid #9b59b6;
+    /* cor roxa */
+    outline-offset: 2px;
+    transition: outline 0.2s ease-in-out;
+}
+
+/* Cards em links ou imagens interativas */
+.image-header-container img:focus {
+    outline: 3px dashed #e74c3c;
+    /* contorno vermelho pontilhado para imagens */
+    outline-offset: 3px;
+    transition: outline 0.2s ease-in-out;
+}
+
+/* FOCO VISÍVEL GLOBAL */
+:focus {
+    outline: 3px solid #00b894;
+    outline-offset: 3px;
+}
+
+/* Melhor para teclado (acessibilidade moderna) */
+:focus-visible {
+    outline: 3px solid #00b894;
+    outline-offset: 3px;
+}
+
+/* Cards */
+.card-info-destaque:focus,
+.card-testimonial:focus,
+.emergency-card:focus {
+    outline: 3px solid #ff9800;
+    outline-offset: 5px;
+    transform: scale(1.02);
+}
+
+.font-size-controls {
+    position: fixed;
+    bottom: 20px;
+    left: 10px;
+    z-index: 9999;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.font-size-controls button {
+    background-color: #00614C;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 0.4rem 0.8rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.font-size-controls button:hover,
+.font-size-controls button:focus {
+    background-color: #00AD88;
+    outline: 2px solid #FFD700;
+}
+
+/* ===============================
+   CAIXA DE ATALHOS DE TECLADO
+=============================== */
+
+.caixa-atalhos {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #ffffff;
+    padding: 16px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    z-index: 9999;
+    max-width: 240px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.caixa-atalhos strong {
+    font-size: 16px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.caixa-atalhos button {
+    margin-top: 10px;
+    width: 100%;
+    border: none;
+    padding: 6px;
+    border-radius: 6px;
+    background: #00614C;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.caixa-atalhos button:hover {
+    background: #00AD88;
+}
+
 /* ---------------- BODY E MAIN ---------------- */
 body,
 main {
