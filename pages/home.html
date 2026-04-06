@@ -16,6 +16,8 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 <!-- CSS personalizado -->
 <link rel="stylesheet" href="../css/main.css">
+<link rel="stylesheet" href="../css/daltonismo.css">
+<script src="../js/daltonismo.js"></script>
 
 <!-- Favicon -->
 <link rel="shortcut icon" href="../imagens/logo-escuro.svg" type="image/x-icon">
@@ -24,9 +26,16 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 <body>
 
+<!-- Botões de ajuste de tamanho de fonte -->
+<div class="font-size-controls">
+    <button id="decrease" aria-label="Diminuir tamanho da fonte" title="Diminuir tamanho da fonte">A-</button>
+    <button id="reset" aria-label="Restaurar tamanho da fonte" title="Restaurar tamanho da fonte">A</button>
+    <button id="increase" aria-label="Aumentar tamanho da fonte" title="Aumentar tamanho da fonte">A+</button>
+</div>
+
 <!-- Botão "Voltar ao Topo" -->
-<button id="btnTopo" title="Voltar ao topo">
-<i class="fa-solid fa-arrow-up"></i>
+<button id="btnTopo" aria-label="Voltar ao topo da página" title="Voltar ao topo">
+  <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
 </button>
 
 <!-- Barra de Navegação (Desktop) -->
@@ -49,15 +58,25 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
 <a class="navbar-btn-item" href="../pages/formulario.html">Formulário</a>
 
 <!-- Ícone do modo claro/escuro -->
-<a href="#" id="dark-mode-toggle" class="navbar-btn-item">
-<i class="fa-solid fa-moon"></i></a>
+<a href="#" id="dark-mode-toggle" class="navbar-btn-item" aria-label="Alternar modo claro e escuro" title="Alternar modo claro/escuro">
+  <i class="fa-solid fa-moon" aria-hidden="true"></i>
+</a>
 
-<a class="navbar-btn-profile" href="../pages/perfil.html">
-<i class="fa-solid fa-user"></i></a>
+<!-- Ícone do perfil -->
+<a class="navbar-btn-profile" href="../pages/perfil.html" aria-label="Ir para perfil do usuário" title="Perfil">
+  <i class="fa-solid fa-user" aria-hidden="true"></i>
+</a>
 
 <!-- Ícone do menu mobile -->
-<a class="nav-btn-items" href="#" id="nav-btn-toggle">
-<i class="fa-solid fa-bars"></i></a>
+<a class="nav-btn-items" href="#" id="nav-btn-toggle" aria-label="Abrir menu mobile" title="Menu">
+  <i class="fa-solid fa-bars" aria-hidden="true"></i>
+</a>
+
+<a href="#" id="daltonismo-toggle" class="btn btn-sm"
+   aria-label="Alternar modo daltonismo" title="Daltonismo">
+   <i class="fa-solid fa-eye-slash"></i> RV
+</a>
+
 </div>
 </nav>
 
@@ -124,147 +143,220 @@ facilitando o atendimento e salvando vidas.
 <h2 class="title-card-info">Porque somos os melhores</h2>
 
 <!-- Seção de Destaques (Benefícios) -->
+ <!-- Cards de destaque -->
 <div class="row content-info-destaque justify-content-center">
-
-<!-- Card de Informações -->
-<div class="col-md-6 col-lg-3 mb-4">
-<section class="card-info-destaque">
-<span class="icon-info-destaque">
-<i class="fa-solid fa-house-chimney-medical"></i>
-</span>
-<p class="title-info-destaque">Acesso Rápido</p>
-<p class="text-info-destaque">
-Nosso sistema fornece dados de emergência em tempo real, garantindo agilidade e precisão quando cada segundo importa.
-</p>
-</section>
-</div>
-
-<!-- Card de Informações -->
-<div class="col-md-6 col-lg-3 mb-4">
-<section class="card-info-destaque">
-<span class="icon-info-destaque">
-<i class="fa-solid fa-laptop-medical"></i>
-</span>
-<p class="title-info-destaque">Tecnologia Segura e Confiável</p>
-<p class="text-info-destaque">
-Usamos plataformas seguras que protegem seus dados e garantem total privacidade, para você confiar.
-</p>
-</section>
-</div>
-
-<!-- Card de Informações -->
-<div class="col-md-6 col-lg-3 mb-4">
-<section class="card-info-destaque">
-<span class="icon-info-destaque">
-<i class="fa-solid fa-heart-pulse"></i>
-</span>
-<p class="title-info-destaque">Equipe Multidisciplinar</p>
-<p class="text-info-destaque">
-Profissionais experientes em saúde e tecnologia oferecem soluções focadas no cuidado e na segurança do paciente.
-</p>
-</section>
-</div>
-
-<!-- Card de Informações -->
-<div class="col-md-6 col-lg-3 mb-4">
-<section class="card-info-destaque">
-<span class="icon-info-destaque">
-<i class="fa-solid fa-briefcase-medical"></i>
-</span>
-<p class="title-info-destaque">Emergências</p>
-<p class="text-info-destaque">
-Acesso rápido e seguro ao histórico médico para decisões ágeis em emergências.
-</p>
-</section>
-</div>
-
+  <div class="col-md-6 col-lg-3 mb-4">
+    <section class="card-info-destaque" tabindex="0" aria-labelledby="card-acesso">
+      <span class="icon-info-destaque">
+        <i class="fa-solid fa-house-chimney-medical" aria-hidden="true"></i>
+      </span>
+      <p id="card-acesso" class="title-info-destaque">Acesso Rápido</p>
+      <p class="text-info-destaque">Nosso sistema fornece dados de emergência em tempo real, garantindo agilidade e precisão quando cada segundo importa.</p>
+    </section>
+  </div>
+  <div class="col-md-6 col-lg-3 mb-4">
+    <section class="card-info-destaque" aria-labelledby="card-tecnologia" tabindex="0">
+      <span class="icon-info-destaque">
+        <i class="fa-solid fa-laptop-medical" aria-hidden="true"></i>
+      </span>
+      <p id="card-tecnologia" class="title-info-destaque">Tecnologia Segura e Confiável</p>
+      <p class="text-info-destaque">Usamos plataformas seguras que protegem seus dados e garantem total privacidade, para você confiar.</p>
+    </section>
+  </div>
+  <div class="col-md-6 col-lg-3 mb-4">
+    <section class="card-info-destaque" aria-labelledby="card-equipe" tabindex="0">
+      <span class="icon-info-destaque">
+        <i class="fa-solid fa-heart-pulse" aria-hidden="true"></i>
+      </span>
+      <p id="card-equipe" class="title-info-destaque">Equipe Multidisciplinar</p>
+      <p class="text-info-destaque">Profissionais experientes em saúde e tecnologia oferecem soluções focadas no cuidado e na segurança do paciente.</p>
+    </section>
+  </div>
+  <div class="col-md-6 col-lg-3 mb-4">
+    <section class="card-info-destaque" aria-labelledby="card-emergencias" tabindex="0">
+      <span class="icon-info-destaque">
+        <i class="fa-solid fa-briefcase-medical" aria-hidden="true"></i>
+      </span>
+      <p id="card-emergencias" class="title-info-destaque">Emergências</p>
+      <p class="text-info-destaque">Acesso rápido e seguro ao histórico médico para decisões ágeis em emergências.</p>
+    </section>
+  </div>
 </div>
 </div>
 
-
-<!-- Título da seção de depoimentos -->
 <h2 class="title-card-testimonial text-center mb-4">
-Testemunhos reais com nossa solução
+  Testemunhos reais com nossa solução
 </h2>
 
-<!-- Container Bootstrap maior e centralizado -->
-<div class="container-fluid my-5 px-2">
-<div class="row g-5 justify-content-center">
+<div id="carouselTestemunhos"
+     class="carousel slide carousel-fade container-fluid my-5 px-2"
+     data-bs-ride="carousel"
+     data-bs-interval="4000"
+     data-bs-pause="false">
 
-<!-- Card de depoimento 1 -->
-<div class="col-12 col-sm-6 col-lg-3 d-flex justify-content-center">
-<section class="card-testimonial">
-<i class="card-quote-testimonial fa-solid fa-quote-left"></i>
-<img class="card-image-testimonial" src="../imagens/imagem-testemunha-1.jpg" alt="Imagem de Renato Souza">
-<hr class="team-divider-testimonial">
-<p class="card-name-testimonial">Renato Souza</p>
-<div class="testimonial-start">
-<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-</div>
-<p class="card-text-testimonial">
-"Desde que começamos a usar a plataforma, percebemos uma melhora 
-significativa na comunicação com nossos pacientes. As informações são claras e acessíveis."
-</p>
-</section>
+  <div class="carousel-inner">
+
+    <!-- ================= SLIDE 1 ================= -->
+    <div class="carousel-item active">
+      <div class="row g-5 justify-content-center">
+
+        <!-- 1 -->
+        <div class="col-12 col-sm-6 col-lg-3 d-flex justify-content-center">
+          <section class="card-testimonial" tabindex="0">
+            <i class="card-quote-testimonial fa-solid fa-quote-left"></i>
+            <img class="card-image-testimonial" src="../imagens/imagem-testemunha-1.jpg" alt="">
+            <hr class="team-divider-testimonial">
+            <p class="card-name-testimonial">Renato Souza</p>
+            <div class="testimonial-start">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="card-text-testimonial">
+              "Melhorou muito nossa comunicação com pacientes."
+            </p>
+          </section>
+        </div>
+
+        <!-- 2 -->
+        <div class="col-12 col-sm-6 col-lg-3 d-flex justify-content-center">
+          <section class="card-testimonial" tabindex="0">
+            <i class="card-quote-testimonial fa-solid fa-quote-left"></i>
+            <img class="card-image-testimonial" src="../imagens/imagem-testemunha-2.jpg" alt="">
+            <hr class="team-divider-testimonial">
+            <p class="card-name-testimonial">Camila Duarte</p>
+            <div class="testimonial-start">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="card-text-testimonial">
+              "Atendimento rápido e informações confiáveis."
+            </p>
+          </section>
+        </div>
+
+        <!-- 3 -->
+        <div class="col-12 col-sm-6 col-lg-3 d-flex justify-content-center">
+          <section class="card-testimonial" tabindex="0">
+            <i class="card-quote-testimonial fa-solid fa-quote-left"></i>
+            <img class="card-image-testimonial" src="../imagens/imagem-testemunha-3.jpg" alt="">
+            <hr class="team-divider-testimonial">
+            <p class="card-name-testimonial">Lucas Almeida</p>
+            <div class="testimonial-start">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="card-text-testimonial">
+              "Tecnologia aplicada com responsabilidade."
+            </p>
+          </section>
+        </div>
+
+        <!-- 4 -->
+        <div class="col-12 col-sm-6 col-lg-3 d-flex justify-content-center">
+          <section class="card-testimonial" tabindex="0">
+            <i class="card-quote-testimonial fa-solid fa-quote-left"></i>
+            <img class="card-image-testimonial" src="../imagens/imagem-testemunha-4.jpg" alt="">
+            <hr class="team-divider-testimonial">
+            <p class="card-name-testimonial">Juliana Alves</p>
+            <div class="testimonial-start">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="card-text-testimonial">
+              "Em emergências, fez toda diferença!"
+            </p>
+          </section>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ================= SLIDE 2 ================= -->
+    <div class="carousel-item">
+      <div class="row g-5 justify-content-center">
+
+        <!-- 5 -->
+        <div class="col-12 col-sm-6 col-lg-3 d-flex justify-content-center">
+          <section class="card-testimonial" tabindex="0">
+            <i class="card-quote-testimonial fa-solid fa-quote-left"></i>
+            <img class="card-image-testimonial" src="../imagens/imagem-testemunha-5.jpg" alt="">
+            <hr class="team-divider-testimonial">
+            <p class="card-name-testimonial">Yasmin Costa</p>
+            <div class="testimonial-start">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="card-text-testimonial">
+              "Sistema intuitivo e muito eficiente."
+            </p>
+          </section>
+        </div>
+
+        <!-- 6 -->
+        <div class="col-12 col-sm-6 col-lg-3 d-flex justify-content-center">
+          <section class="card-testimonial" tabindex="0">
+            <i class="card-quote-testimonial fa-solid fa-quote-left"></i>
+            <img class="card-image-testimonial" src="../imagens/imagem-testemunha-6.jpg" alt="">
+            <hr class="team-divider-testimonial">
+            <p class="card-name-testimonial">Eduardo Lima</p>
+            <div class="testimonial-start">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="card-text-testimonial">
+              "Muito mais organização no atendimento."
+            </p>
+          </section>
+        </div>
+
+        <!-- 7 -->
+        <div class="col-12 col-sm-6 col-lg-3 d-flex justify-content-center">
+          <section class="card-testimonial" tabindex="0">
+            <i class="card-quote-testimonial fa-solid fa-quote-left"></i>
+            <img class="card-image-testimonial" src="../imagens/imagem-testemunha-7.jpg" alt="">
+            <hr class="team-divider-testimonial">
+            <p class="card-name-testimonial">Helena Rocha</p>
+            <div class="testimonial-start">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="card-text-testimonial">
+              "Plataforma segura e confiável."
+            </p>
+          </section>
+        </div>
+
+        <!-- 8 -->
+        <div class="col-12 col-sm-6 col-lg-3 d-flex justify-content-center">
+          <section class="card-testimonial" tabindex="0">
+            <i class="card-quote-testimonial fa-solid fa-quote-left"></i>
+            <img class="card-image-testimonial" src="../imagens/imagem-testemunha-8.jpg" alt="">
+            <hr class="team-divider-testimonial">
+            <p class="card-name-testimonial">Ricardo Martins</p>
+            <div class="testimonial-start">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="card-text-testimonial">
+              "Recomendo totalmente para clínicas e hospitais."
+            </p>
+          </section>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
 </div>
 
-<!-- Card de depoimento 2 -->
-<div class="col-12 col-sm-6 col-lg-3 d-flex justify-content-center">
-<section class="card-testimonial">
-<i class="card-quote-testimonial fa-solid fa-quote-left"></i>
-<img class="card-image-testimonial" src="../imagens/imagem-testemunha-2.jpg" alt="Imagem de Camila Duarte">
-<hr class="team-divider-testimonial">
-<p class="card-name-testimonial">Camila Duarte</p>
-<div class="testimonial-start">
-<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-</div>
-<p class="card-text-testimonial">
-"A inovação dessa empresa transformou nosso dia a dia.
-A agilidade no atendimento e o acesso a dados confiáveis fizeram toda a diferença para mim."
-</p>
-</section>
-</div>
-
-<!-- Card de depoimento 3 -->
-<div class="col-12 col-sm-6 col-lg-3 d-flex justify-content-center">
-<section class="card-testimonial">
-<i class="card-quote-testimonial fa-solid fa-quote-left"></i>
-<img class="card-image-testimonial" src="../imagens/imagem-testemunha-3.jpg" alt="Imagem de Lucas Almeida">
-<hr class="team-divider-testimonial">
-<p class="card-name-testimonial">Lucas Almeida</p>
-<div class="testimonial-start">
-<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-</div>
-<p class="card-text-testimonial">
-"Confio totalmente nas soluções que oferecem. A tecnologia aplicada com responsabilidade garante que possamos 
-cuidar melhor de nossos pacientes, otimizando processos."
-</p>
-</section>
-</div>
-
-<!-- Card de depoimento 4 -->
-<div class="col-12 col-sm-6 col-lg-3 d-flex justify-content-center">
-<section class="card-testimonial">
-<i class="card-quote-testimonial fa-solid fa-quote-left"></i>
-<img class="card-image-testimonial" src="../imagens/imagem-testemunha-4.jpg" alt="Imagem de Juliana Alves">
-<hr class="team-divider-testimonial">
-<p class="card-name-testimonial">Juliana Alves</p>
-<div class="testimonial-start">
-<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-</div>
-<p class="card-text-testimonial">
-"Em uma emergência com minha filha, o Med Track fez toda a diferença. 
-Em segundos, os médicos tinham acesso ao histórico médico dela. Rápido, prático e seguro!"
-</p>
-</section>
-</div>
-
-</div>
-</div>
 
 
 <div class="container-fluid my-4 px-4">
@@ -278,7 +370,7 @@ Em segundos, os médicos tinham acesso ao histórico médico dela. Rápido, prá
 
 <div class="row">
 <div class="col-12 col-md-6 mb-3">
-<div class="emergency-card h-100">
+<div class="emergency-card h-100" tabindex="0">
 <h3>Contatos de Emergência</h3>
 <ul class="list-unstyled mb-0">
 <li>SAMU - 192</li>
@@ -289,7 +381,7 @@ Em segundos, os médicos tinham acesso ao histórico médico dela. Rápido, prá
 </div>
 
 <div class="col-12 col-md-6 mb-3">
-<div class="emergency-card h-100">
+<div class="emergency-card h-100" tabindex="0">
 <h3>Dicas de Primeiros Socorros</h3>
 <ul class="list-unstyled mb-0">
 <li>Parar hemorragias com compressão direta</li>
@@ -300,7 +392,7 @@ Em segundos, os médicos tinham acesso ao histórico médico dela. Rápido, prá
 </div>
 
 <div class="col-12 col-md-6 mb-3">
-<div class="emergency-card h-100">
+<div class="emergency-card h-100" tabindex="0">
 <h3>Kit de Primeiros Socorros</h3>
 <ul class="list-unstyled mb-0">
 <li>Curativos</li>
@@ -313,7 +405,7 @@ Em segundos, os médicos tinham acesso ao histórico médico dela. Rápido, prá
 </div>
 
 <div class="col-12 col-md-6 mb-3">
-<div class="emergency-card h-100">
+<div class="emergency-card h-100" tabindex="0">
 <h3>Hospitais Próximos</h3>
 <ul class="list-unstyled mb-0">
 <li>Hospital Central - Rua Principal, 123</li>
@@ -340,10 +432,18 @@ Em segundos, os médicos tinham acesso ao histórico médico dela. Rápido, prá
 
 <!-- Ícones das redes sociais -->
 <div class="footer-social">
-<a class="footer-social-link" href="#"><i class="fa-brands fa-facebook-f"></i></a>
-<a class="footer-social-link" href="#"><i class="fa-brands fa-instagram"></i></a>
-<a class="footer-social-link" href="#"><i class="fa-brands fa-youtube"></i></a>
-<a class="footer-social-link" href="#"><i class="fa-brands fa-x-twitter"></i></a>
+  <a class="footer-social-link" href="#" aria-label="Facebook" title="Facebook">
+    <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+  </a>
+  <a class="footer-social-link" href="#" aria-label="Instagram" title="Instagram">
+    <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+  </a>
+  <a class="footer-social-link" href="#" aria-label="YouTube" title="YouTube">
+    <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+  </a>
+  <a class="footer-social-link" href="#" aria-label="X (Twitter)" title="X (Twitter)">
+    <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+  </a>
 </div>
 
 <!-- Menu de navegação do rodapé -->
@@ -365,10 +465,11 @@ Em segundos, os médicos tinham acesso ao histórico médico dela. Rápido, prá
 <a class="footer-link" href="../pages/formulario.html">Formulário</a></li>
 
 <li class="footer-item">
-<a class="footer-link" href="../pages/pagina-perfis.html">Perfis</a></li>
+<a class="footer-link" href="../pages/busca-perfil.html">Busca Perfil</a>
 
 <li class="footer-item">
 <a class="footer-link" href="../pages/perfil.html">Perfil</a></li>
+
 </ul>
 </footer>
 <!-- Seção de direitos autorais -->
@@ -387,15 +488,21 @@ Em segundos, os médicos tinham acesso ao histórico médico dela. Rápido, prá
 </div>
 
 
-<!-- Importa o script-->
+<!-- Bootstrap JS (OBRIGATÓRIO para o carousel funcionar) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 <script src="../js/navbar-mobile.js"></script>
 <script src="../js/modo-escuro.js"></script>
 <script src="../js/voltar-topo.js"></script>
+<script src="../js/atalhos-teclado.js"></script>
+<script src="../js/font-size.js"></script>
+
 
 <!-- Importa VLIBRAS-->
 <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
 <script>
 new window.VLibras.Widget('https://vlibras.gov.br/app');
 </script>
+</body>
+</html>
 
 

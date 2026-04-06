@@ -15,22 +15,26 @@ integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJ
 
 <!-- Seu CSS -->
 <link rel="stylesheet" href="../css/auth.css">
+<link rel="stylesheet" href="../css/daltonismo.css">
+<script src="../js/daltonismo.js"></script>
 
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
 crossorigin="anonymous" referrerpolicy="no-referrer">
+
 </head>
 
 <body>
-<main class="d-flex align-items-center justify-content-center min-vh-100">
+<main class="d-flex align-items-center justify-content-center min-vh-100" role="main">
+
 <!-- Container principal -->
-<section class="container-login d-flex flex-wrap shadow rounded overflow-hidden">
+<section class="container-login d-flex flex-wrap shadow rounded overflow-hidden" role="region" aria-label="Formulário de login">
 
 <!-- Coluna imagem -->
 <div class="container-imagem-1 d-flex align-items-center justify-content-center p-3 col-12 col-md-6">
-<img src="../imagens/imagem-header-login.svg" alt="Imagem da Página de Login"
-class="img-fluid rounded">
+<img src="../imagens/imagem-header-login.svg" alt="Ilustração da página de login Medtrack" 
+class="img-fluid rounded" title="Página de Login">
 </div>
 
 <!-- Coluna formulário -->
@@ -38,54 +42,54 @@ class="img-fluid rounded">
 
 <!-- Botão modo escuro -->
 <a href="#" id="dark-mode-toggle"
-class="theme-toggle btn btn-sm rounded-circle d-flex align-items-center justify-content-center">
-<i class="fa-solid fa-moon"></i>
+class="theme-toggle btn btn-sm rounded-circle d-flex align-items-center justify-content-center"
+aria-label="Ativar ou desativar modo escuro">
+<i class="fa-solid fa-moon" aria-hidden="true"></i>
 </a>
 
 <!-- Botão voltar -->
-<a class="seta btn btn-sm d-flex align-items-center justify-content-center" href="../pages/home.html">
-<i class="fa-solid fa-arrow-left"></i>
+<a class="seta btn btn-sm d-flex align-items-center justify-content-center" href="../pages/home.html"
+aria-label="Voltar à página inicial">
+<i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
 </a>
 
 <!-- Título -->
 <h1 class="text-center title-form mt-5">FAÇA SEU LOGIN</h1>
 <p class="texto text-center">Seu espaço para cuidar da saúde.</p>
 
-
 <!-- Ícones de login via redes sociais -->
-<div class="icons">
-<a href="#"><i class="fa-brands fa-google"></i></a>
-<a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-<a href="#"><i class="fa-brands fa-instagram"></i></a>
+<div class="icons" role="group" aria-label="Login via redes sociais">
+<a href="#" aria-label="Login com Google"><i class="fa-brands fa-google" aria-hidden="true"></i></a>
+<a href="#" aria-label="Login com Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+<a href="#" aria-label="Login com Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
 </div>
 
 <!-- Formulário -->
-<form class="login-form">
+<form class="login-form" novalidate>
 
 <div class="mb-2">
-<label for="email" class="form-label">E-mail:</label>
+<label for="email" class="form-label">E-mail: <span class="text-danger">*</span></label>
 <input type="email" id="email" name="email" class="form-control"
-placeholder="Digite o seu e-mail." required>
+placeholder="Digite o seu e-mail." required aria-label="Digite o seu e-mail">
 </div>
 
 <div class="mb-2">
-<label for="senha" class="form-label">Senha:</label>
+<label for="senha" class="form-label">Senha: <span class="text-danger">*</span></label>
 <input type="password" id="senha" name="senha" class="form-control"
-placeholder="Digite a sua senha." required>
+placeholder="Digite a sua senha." required aria-label="Digite a sua senha">
 </div>
 
 <!-- Link login -->
 <div class="esqueceu-senha text-end mb-2">
-<a href="../pages/login.html">Esqueceu a senha?</a>
+<a href="../pages/login.html" aria-label="Esqueceu a senha?">Esqueceu a senha?</a>
 </div>
 
 <!-- Botão enviar -->
-<button type="submit" class="btn w-100">Entrar</button>
+<button type="submit" class="btn w-100" aria-label="Entrar na conta">Entrar na Conta</button>
 
-
-<!-- Link login -->
+<!-- Link cadastro -->
 <div class="esqueceu-senha text-end mb-2">
-<a href="../pages/cadastro.html">Não tem conta? Cadastre-se</a>
+<a href="../pages/cadastro.html" aria-label="Não tem conta? Cadastre-se">Não tem conta? Cadastre-se</a>
 </div>
 
 </form>
@@ -103,6 +107,9 @@ placeholder="Digite a sua senha." required>
 
 <!-- Script modo escuro -->
 <script src="../js/modo-escuro.js"></script>
+<script src="../js/validacao-auth.js"></script>
+<script src="../js/font-size.js"></script>
+
 
 <!-- VLibras -->
 <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>

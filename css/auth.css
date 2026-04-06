@@ -8,6 +8,33 @@
     box-sizing: border-box;
 }
 
+/* Campo com erro */
+.input-erro {
+  border: 2px solid #dc3545 !important;
+}
+
+/* Campo correto */
+.input-sucesso {
+  border: 2px solid #198754 !important;
+}
+
+/* Mensagem de erro */
+.mensagem-erro {
+  color: #dc3545;
+  font-size: 0.85rem;
+  margin-top: 3px;
+}
+
+/* Mensagem de sucesso geral */
+.mensagem-sucesso {
+  background: #d1e7dd;
+  color: #0f5132;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+  text-align: center;
+}
+
 :root {
     --fonte-montserrat: "Montserrat", sans-serif;
     --fonte-karla: "Karla", sans-serif;
@@ -114,7 +141,7 @@ main {
     align-items: center;
     padding: 20px;
     background-color: var(--cor-branco);
-    background-image: url(../imagens/blob-haikei.svg);
+    background-image: url(../imagens/fundo-login-cadastro.svg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: auto;
@@ -127,7 +154,7 @@ main {
     align-items: center;
     padding: 20px;
     background-color: var(--cor-branco);
-    background-image: url(../imagens/blob-haikei.svg);
+    background-image: url(../imagens/fundo-login-cadastro.svg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: auto;
@@ -204,68 +231,59 @@ main {
     border-color: var(--cor-cinza);
 }
 
-
 input#senha,
-input#confirmar-senha {
-    background: url('../imagens/senha.svg') no-repeat 10px center;
-    background-size: 23px;
-    padding-left: 40px;
-    border: 1px solid #dbdbdb;
-}
-
+input#confirmar-senha,
 input#email,
-input#confirmar-email {
-    background: url('../imagens/email.svg') no-repeat 10px center;
-    background-size: 23px;
-    padding-left: 40px;
-    border: 1px solid #dbdbdb;
-}
-
+input#confirmar-email,
 input#dataNascimento,
-input#frequencia {
-    background: url('../imagens/calendar-days-solid-full.svg') no-repeat 10px center;
-    background-size: 23px;
-    padding-left: 40px;
-    border: 1px solid #dbdbdb;
-}
-
+input#frequencia,
 input#sus,
 input#nomeContato,
-input#altura{
-    background: url('../imagens/chart-simple-solid-full.svg') no-repeat 10px center;
-    background-size: 23px;
-    padding-left: 40px;
-    border: 1px solid #dbdbdb;
-}
-
+input#altura,
+input#cpf,
 input#nome,
-input#cpf {
-    background: url('../imagens/text.svg') no-repeat 10px center;
-    background-size: 23px;
-    padding-left: 40px;
-    border: 1px solid #dbdbdb;
-}
-
 input#peso,
-input#medicamento {
-    background: url('../imagens/shop-solid-full.svg') no-repeat 10px center;
-    background-size: 23px;
-    padding-left: 40px;
-    border: 1px solid #dbdbdb;
-}
-
+input#medicamento,
 input#telefoneContato,
 input#relacionamento,
-input#dosagem {
-    background: url('../imagens/suitcase-medical-solid-full.svg') no-repeat 10px center;
+input#dosagem,
+textarea#observacoes {
+    background-repeat: no-repeat;
+    background-position: 10px center;
     background-size: 23px;
     padding-left: 40px;
     border: 1px solid #dbdbdb;
 }
 
+textarea#observacoes {
+    background-image: url('../imagens/observacao.svg');
+    background-position: 10px 10px;
+    padding-top: 10px; 
+}
+
+/* Apenas imagens dos inputs */
+input#senha { background-image: url('../imagens/senha.svg'); }
+input#confirmar-senha { background-image: url('../imagens/repete-senha.svg'); }
+input#email { background-image: url('../imagens/email.svg'); }
+input#confirmar-email { background-image: url('../imagens/repete-email.svg'); }
+input#dataNascimento { background-image: url('../imagens/data.svg'); }
+input#frequencia { background-image: url('../imagens/frequencia.svg'); }
+input#sus { background-image: url('../imagens/sus.svg'); }
+input#nomeContato { background-image: url('../imagens/nomeContato.svg'); }
+input#altura { background-image: url('../imagens/altura.svg'); }
+input#cpf { background-image: url('../imagens/cpf.svg'); }
+input#nome { background-image: url('../imagens/user.svg'); }
+input#peso { background-image: url('../imagens/peso.svg'); }
+input#medicamento { background-image: url('../imagens/medicamento.svg'); }
+input#telefoneContato { background-image: url('../imagens/telefoneContato.svg'); }
+input#relacionamento { background-image: url('../imagens/relacionamento.svg'); }
+input#dosagem { background-image: url('../imagens/dosagem.svg'); }
+
+/* Regras iguais para os selects */
 select#sexo,
 select#tipo-sanguineo {
-    background: url('../imagens/bars-solid-full.svg') no-repeat 10px center;
+    background-repeat: no-repeat;
+    background-position: 10px center;
     background-size: 23px;
     padding-left: 40px;
     background-color: var(--cor-branco);
@@ -278,9 +296,26 @@ select#tipo-sanguineo {
     -moz-appearance: none;
 }
 
+select#sexo { 
+    background-image: url('../imagens/sexo.svg'); 
+}
+select#tipo-sanguineo { 
+    background-image: url('../imagens/tipo-sanguineo.svg'); 
+}
+
 body.dark-mode select#sexo,
 body.dark-mode select#tipo-sanguineo{
     color: var(--cor-preto);
+}
+
+body.dark-mode textarea.form-control {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    border-color: #444;
+}
+
+body.dark-mode .form-control::placeholder {
+    color: #aaa;
 }
 
 select#sexo option[disabled][selected],
@@ -298,14 +333,6 @@ select#tipo-sanguineo::after {
     top: 50%;
     transform: translateY(-50%);
     pointer-events: none;
-}
-
-textarea#observacoes {
-    background: url('../imagens/envelope-solid-full.svg') no-repeat 10px 10px;
-    background-size: 23px;
-    padding-left: 40px;
-    padding-top: 10px;
-    border: 1px solid #dbdbdb;
 }
 
 .login-form .form-control {

@@ -31,7 +31,7 @@ body.dark-mode {
 
 #dark-mode-toggle {
   position: absolute;
-  top: 0px;
+  top: 0;
   left: 0;
   width: 45px;
   height: 45px;
@@ -228,7 +228,6 @@ h1 {
   color: var(--cor-preto);
 }
 
-
 .seta {
   position: absolute;
   top: 0;
@@ -250,28 +249,11 @@ h1 {
   background-color: var(--cor-secundaria);
 }
 
-/* Ícones de input */
-input[type=email] {
-  background-image: url("/imagens/email.svg");
+input[type="email"],
+input[type="text"],
+input[type="number"] {
+  background: url("/imagens/email.svg") no-repeat 10px center;
   background-size: 20px;
-  background-position: 10px center;
-  background-repeat: no-repeat;
-  padding-left: 40px;
-}
-
-input[type=text] {
-  background-image: url("/imagens/email.svg");
-  background-size: 20px;
-  background-position: 10px center;
-  background-repeat: no-repeat;
-  padding-left: 40px;
-}
-
-input[type=number] {
-  background-image: url("/imagens/email.svg");
-  background-size: 20px;
-  background-position: 10px center;
-  background-repeat: no-repeat;
   padding-left: 40px;
 }
 
@@ -369,4 +351,59 @@ input[type=submit]:hover {
     font-size: 13px;
     padding: 8px;
   }
+}
+
+/* Campos do formulário */
+input,
+select,
+textarea {
+  transition: 0.2s ease;
+}
+
+/* Quando o campo estiver com erro */
+input.erro,
+select.erro,
+textarea.erro {
+  border: 2px solid #dc3545;
+  background-color: #fff5f5;
+}
+
+/* Mensagem de erro abaixo do campo */
+.erro-msg {
+  color: #dc3545;
+  font-size: 0.85rem;
+  margin-top: 4px;
+}
+
+/* Mensagem geral do formulário */
+.mensagem-form {
+  margin-top: 15px;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* Sucesso */
+.mensagem-sucesso {
+  color: #198754;
+}
+
+/* Erro geral */
+.mensagem-erro {
+  color: #dc3545;
+}
+
+/* Campo válido (opcional - melhora UX) */
+input.valido,
+select.valido,
+textarea.valido {
+  border: 2px solid #198754;
+  background-color: #f6fff8;
+}
+
+/* Foco no campo */
+input:focus,
+select:focus,
+textarea:focus {
+  box-shadow: none !important;
+  border-color: #0d6efd;
 }
